@@ -1,0 +1,75 @@
+
+<footer>
+  <div class="container p-2">
+    <div class="row gy-4">
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="logo">
+          <img src="assets/logo.webp" alt="شعار الشركة" />
+          <div class="social">
+            <a href="https://www.tiktok.com/@madain.re" class="">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://x.com/almuslih1445" class="">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/almuslih1445/" class="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.snapchat.com/@madain.re" class="">
+              <i class="fab fa-snapchat"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="box">
+            <h3>التواصل</h3>
+            <ul>
+                <li (click)="location()">
+                    <i class="fas fa-location-dot"></i>
+                    <span>جدة - حي السلامة - شارع اليمامة - مركز اليمامة للاعمال - مكتب 102</span>
+                </li>
+                <li (click)="openWhatsApp()">
+                      <i class="fab fa-whatsapp"></i>
+                      <span>0539885590</span>
+                </li>
+                <li (click)="openCall()">
+                    <i class="fas fa-phone"></i>
+                    <span>920016343</span>
+                </li>
+                <li (click)="sendEmail()">
+                    <i class="fas fa-envelope"></i>
+                    <span>marketing&#64;madain.sa</span>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12">
+                <div class="box">
+            <h3>الصفحات</h3>
+            <ul>
+                <li routerLink="/home">
+                    <span>الرئيسية</span>
+                </li>
+                <li routerLink="/about">
+                    <span>من نحن</span>
+                </li>
+                <li>
+                    <span>مشاريعنا</span>
+                </li>
+                <li>
+                    <span>خدمتنا</span>
+                </li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="copyright container">
+    شركة مدائن للتطوير العقاري 2025 © تصميم وتطوير شركة مدائن.
+  </div>
+</footer>

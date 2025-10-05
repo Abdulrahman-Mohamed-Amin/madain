@@ -1,0 +1,22 @@
+
+.madain{
+    background: #666;
+    color: #fff;
+    font-size: 25px;
+    padding: 20px 0;
+    position: relative;
+}
+img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+p{
+    font-size: 16px;
+}
+@media(max-width:578px){
+    .madain{
+        font-size: 16px;
+    }
+}

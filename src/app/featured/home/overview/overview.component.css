@@ -1,0 +1,30 @@
+
+.overview{
+    background: var(--blue2);
+    /* background-image: url(../../../../assets/خلفية.jpg);
+    background-size: cover;
+    background-position: 100%; */
+    color: #fff;
+    padding: 40px 0; 
+}
+.overview .text p {
+    line-height: 1.7;
+    font-size: 18px;
+}
+.overview .text a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--lighit1);
+    text-decoration: none;
+}
+.overview .text a:hover{
+    text-decoration: underline;
+}
+
+@media(max-width:991px){
+    .overview .text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
