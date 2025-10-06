@@ -14,7 +14,7 @@ export class HeaderComponent {
   openContact:boolean = false
   @Input() logo = true
 
-  whatsappNumber:string = '996539885590'
+  whatsappNumber:string = '966539885590'
 phoneNumber:string = '920016343'
  email = 'marketing@madain.sa';
 

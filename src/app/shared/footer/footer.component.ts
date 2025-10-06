@@ -9,18 +9,18 @@ import { RouterLink } from "@angular/router";
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-whatsappNumber:string = '996539885590'
-phoneNumber:string = '920016343'
- email = 'marketing@madain.sa';
+  phoneNumber:string = '920016343'
+  email = 'marketing@madain.sa';
+  whatsappNumber:string = '966539885590'
 
+ openWhatsApp() {
+ window.open(`https://wa.me/${this.whatsappNumber}`, "_blank");
+}
   sendEmail() {
     window.location.href = `mailto:${this.email}`;
   }
   location() {
     window.open( `https://maps.app.goo.gl/oQGvU9VZ7c58Gg1U6` , "_blank")
-  }
-    openWhatsApp() {
-    window.open(`https://wa.me/${this.whatsappNumber}`, "_blank");
   }
 
   openCall() {
