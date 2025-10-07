@@ -65,12 +65,8 @@
     padding: 10px 25px;
 }
 
-.wave{
-    position: absolute;
-    bottom: 0;
-    z-index: 10;
-    left: 0;
-    width: 100%;
+.hide{
+    display: none;
 }
 @media(max-width:991px){
     .text{
@@ -84,6 +80,15 @@
     }
     .text p{
         width: 80%;
+    }
+    
+}
+@media(max-width:768px){
+    .hide{
+        display: block;
+    }
+    .show{
+        display: none;
     }
 }
 @media(max-width:576px){
