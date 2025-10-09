@@ -1,7 +1,6 @@
 {
   "routes": [
     "/about",
-    "/contact",
     "/helm-101",
     "/helm-102",
     "/helm-103",

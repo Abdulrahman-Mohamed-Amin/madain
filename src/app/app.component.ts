@@ -1,6 +1,6 @@
 import { isPlatformBrowser, Location, PopStateEvent } from '@angular/common';
-import { Component, effect, HostListener, inject, Inject, OnInit, PLATFORM_ID } from '@angular/core';
-import { NavigationEnd, RouterModule , Router } from '@angular/router';
+import { Component, effect, HostListener, inject, Inject, NgZone, OnInit, PLATFORM_ID } from '@angular/core';
+import { NavigationEnd, RouterModule , Router, Scroll } from '@angular/router';
 import * as AOS from 'aos';
 import { filter } from 'rxjs';
 
@@ -21,31 +21,50 @@ export class AppComponent implements OnInit{
 
 //  }
 
-   constructor(@Inject(PLATFORM_ID) private platformId: Object  , private router: Router) 
- {
-  if (isPlatformBrowser(this.platformId)) {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      window.scrollTo(0, 0);
-    });
-  
-  }
-}
+  //  constructor(@Inject(PLATFORM_ID) private platformId: Object  , private router: Router) {}
+
+   constructor(
+    private router: Router,
+    private ngZone: NgZone,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId)) {
-      AOS.init({
-        duration: 1200,
-        once: true,
+    // شغّل AOS فقط في المتصفح (خصوصاً لو عندك SSR)
+    if (!isPlatformBrowser(this.platformId)) return;
+
+    // تهيئة أولية
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+
+    // الطريقة المفضّلة: استمع لأحداث Scroll من الراوتر (تضمن أن استعادة الـ scroll اكتملت)
+    this.router.events.pipe(
+      filter(e => e instanceof Scroll)
+    ).subscribe((e: Scroll) => {
+      // ننتظر الإطار التالي بعد انتهاء الـ scroll/layout ثم نعيد حساب AOS
+      // استخدام requestAnimationFrame مرتين يضمن أن DOM قد استقر
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          AOS.refresh(); // أخفّ من refreshHard
+        });
       });
+    });
 
+    // دعم احتياطي: لو لم تعمل Scroll events لأي سبب، نستخدم NavigationEnd كبديل
+    this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd)
+    ).subscribe(() => {
+      // لو أنت تريد إجبار الصفحة للفوق:
+      window.scrollTo(0, 0);
 
-
-      
-
-
-
+      // ننتظر قليلًا ثم نحدّث AOS
+      setTimeout(() => {
+        AOS.refresh();
+      }, 3000);
+    });
   }
-}
+   
 
 }

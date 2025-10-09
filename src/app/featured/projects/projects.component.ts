@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { CarouselModule } from 'ngx-owl-carousel-o';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
@@ -8,7 +7,7 @@ import { MetaService } from '../../core/meta.service';
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CarouselModule, RouterModule, HeaderComponent, FooterComponent],
+  imports: [ RouterModule, HeaderComponent, FooterComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
