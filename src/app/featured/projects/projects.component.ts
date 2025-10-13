@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { MetaService } from '../../core/meta.service';
+import { ProjComponent } from "../home/proj/proj.component";
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ RouterModule, HeaderComponent, FooterComponent],
+  imports: [RouterModule, HeaderComponent, FooterComponent, ProjComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })

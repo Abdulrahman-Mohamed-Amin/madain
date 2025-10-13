@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { pipe } from 'rxjs';
 
@@ -12,4 +12,5 @@ import { pipe } from 'rxjs';
 })
 export class ProjComponent {
 
+  @Input() title = true
 }
