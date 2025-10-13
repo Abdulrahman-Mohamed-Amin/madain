@@ -3,7 +3,7 @@ import {Routes} from '@angular/router';
 import { HomeComponent } from './featured/home/home/home.component';
 
 export const routes: Routes = [
-    {path:"" ,redirectTo: "services" , pathMatch:"full"},
+    {path:"" ,redirectTo: "home" , pathMatch:"full"},
     {path:"home" , loadComponent:() => import('./featured/home/home/home.component').then((c) => c.HomeComponent) },
     {path:"about" , loadComponent:() => import('./featured/about/about.component').then((c) => c.AboutComponent)},
     {path:"services" , loadComponent:() => import('./featured/services/services.component').then((c) => c.ServicesComponent)},
