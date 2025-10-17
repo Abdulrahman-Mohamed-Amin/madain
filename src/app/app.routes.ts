@@ -12,6 +12,8 @@ export const routes: Routes = [
     {path:"helm-102" , loadComponent:() => import('./featured/helm-102/helm-102.component').then((c) => c.Helm102Component)},
     {path:"helm-103" , loadComponent:() => import('./featured/helm-103/helm-103.component').then((c) => c.Helm103Component)},
     {path:"helm-104" , loadComponent:() => import('./featured/helm-104/helm-104.component').then((c) => c.Helm104Component)},
+    {path:"helm-105" , loadComponent:() => import('./featured/helm-105/helm-105.component').then((c) => c.Helm105Component)},
+    {path:"helm-106" , loadComponent:() => import('./featured/helm-106/helm-106.component').then((c) => c.Helm106Component)},
     { path: "**", loadComponent: () => import('./featured/home/home/home.component').then(c => c.HomeComponent) }
 
 ];
