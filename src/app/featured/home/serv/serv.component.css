@@ -1,42 +1,77 @@
 section{
     background: #fff;
-    padding: 150px 0 60px 0;
+    padding: 150px 0 80px 0;
 }
-img{
-    width: 100%;
-    height: 300px;
-}
-.col-12{
-    padding: 0;
-    background: var(--blue2);
-}
-.box{
-    color: var(--lighit1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-}
-.box i {
-    font-size: 30px;
-    /* border:2px solid var(--lighit1); */
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
 
+.services-section {
+  background: #fff;
+  overflow: hidden;
 }
-.box h3{
-    font-size: 20px;
+
+.service-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 380px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
 }
-.box p {
-    color: #fff;
-    text-align: center;
-    line-height: 1.7;
-    padding: 0 15px;
+.service-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+  transition: all 0.5s ease;
+}
+.service-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(40%);
+}
+
+/* النص ظاهر دائمًا */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  transition: all 0.5s ease;
+}
+
+/* حركة عند الهوفر */
+.service-card:hover .overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
+  transform: translateY(-5px);
+}
+
+.overlay h3 {
+  color: var(--lighit1);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.overlay p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.btn-gold-sm {
+  align-self: flex-start;
+  background: linear-gradient(135deg, var(--lighit1) , var(--lighit2) );
+  border: none;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-gold-sm:hover {
+  background: linear-gradient(135deg, var(--lighit2) , var(--lighit1));
+  transform: translateY(-3px);
 }
 
 

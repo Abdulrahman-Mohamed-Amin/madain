@@ -1,9 +1,6 @@
 
 .overview{
     background: var(--blue2);
-    /* background-image: url(../../../../assets/خلفية.jpg);
-    background-size: cover;
-    background-position: 100%; */
     color: #fff;
     padding: 40px 0; 
 }
@@ -28,3 +25,4 @@
         line-height: 1.5;
     }
 }
+

@@ -36,35 +36,6 @@
     top: 0;
 }
 
-.text {
-    position: absolute;
-    z-index: 2;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50% , -50%);
-    text-align: center;
-}
-.text h1{
-    font-size: 50px;
-    font-weight: bold;
-}
-.text h1 span{
-    font-size: 50px;
-    color: var(--lighit1);
-}
-.text p {
-    font-size: 13px;
-    color: #ffffffb2;
-    margin: 20px auto 0;
-    width: 60%;
-
-}
-.text a{
-    margin-top: 40px;
-    padding: 10px 25px;
-}
-
 .hide{
     display: none;
 }
@@ -91,22 +62,91 @@
         display: none;
     }
 }
-@media(max-width:576px){
-    .text{
-        width: 100%;
-        padding: 0 15px;
-    }
-    .text h1{
-        font-size: 25px;
-    }
-    .text h1 span{
-        font-size: 30px;
-    }
-    .text p{
-        width: 100%;
-    }
-    .text a{
-            margin-top: 30px;
-    padding: 8px 20px;
-    }
+
+.text{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50% , -50%);
+    z-index: 5;
+}
+.hero-text {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  /* padding: 100px 20px 0; */
+}
+
+/* العنوان */
+.hero-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #F6B281, #fff, #CE8C5B);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldFlow 6s linear infinite;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-heading::before {
+  content: attr(data-title);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.05);
+  white-space: nowrap;
+  z-index: 5;
+}
+
+/* النص */
+.hero-subtext {
+  margin: 15px auto 0;
+  color: #f0f0f0;
+  letter-spacing: 0.5px;
+  animation: fadeUp 1.3s ease forwards 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* الأزرار */
+.hero-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+/* الأنيميشن */
+@keyframes goldFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .tetx .hero-heading {
+    font-size: 100px;
+  }
+  .hero-heading::before {
+    font-size: 5rem;
+  }
+  .hero-subtext{
+    font-size: 13px;
+  }
 }

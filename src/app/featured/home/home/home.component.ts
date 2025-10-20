@@ -9,11 +9,12 @@ import { FooterComponent } from "../../../shared/footer/footer.component";
 import { MadainComponent } from "../madain/madain.component";
 import { ProjComponent } from "../proj/proj.component";
 import { MetaService } from '../../../core/meta.service';
+import { BayotComponent } from "../../bayot/bayot.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [LandingComponent, OverviewComponent, ProjectsComponent, ServComponent, QemnaComponent, VesionComponent, FooterComponent, MadainComponent, ProjComponent],
+  imports: [LandingComponent, OverviewComponent, ProjectsComponent, ServComponent, QemnaComponent, VesionComponent, FooterComponent, MadainComponent, ProjComponent, BayotComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

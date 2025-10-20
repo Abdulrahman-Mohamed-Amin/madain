@@ -8,6 +8,7 @@ export const routes: Routes = [
     {path:"about" , loadComponent:() => import('./featured/about/about.component').then((c) => c.AboutComponent)},
     {path:"services" , loadComponent:() => import('./featured/services/services.component').then((c) => c.ServicesComponent)},
     {path:"projects" , loadComponent:() => import('./featured/projects/projects.component').then((c) => c.ProjectsComponent)},
+    {path:"contact" , loadComponent:() => import('./featured/contact/contact.component').then((c) => c.ContactComponent)},
     {path:"helm-101" , loadComponent:() => import('./featured/helm-101/helm-101.component').then((c) => c.Helm101Component)},
     {path:"helm-102" , loadComponent:() => import('./featured/helm-102/helm-102.component').then((c) => c.Helm102Component)},
     {path:"helm-103" , loadComponent:() => import('./featured/helm-103/helm-103.component').then((c) => c.Helm103Component)},

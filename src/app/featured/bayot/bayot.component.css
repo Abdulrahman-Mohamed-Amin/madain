@@ -1,0 +1,47 @@
+
+ .partnership-section {
+  background: #fff;
+  overflow: hidden;
+}
+
+.text-gold {
+  color: var(--lighit2);
+}
+.small{
+    color: #000;
+    font-weight: bold;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.image-wrapper img {
+  transition: transform 0.4s ease;
+}
+.image-wrapper:hover img {
+  transform: scale(1.03);
+}
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  background: radial-gradient(circle at center, rgba(182,138,26,0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.image-wrapper:hover .image-overlay {
+  opacity: 1;
+}
+
+.animate-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.9s ease forwards;
+}
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

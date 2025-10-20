@@ -1,81 +1,103 @@
 <section class="" data-aos="fade-up">
-    <div class="stats w-100">
+  <div class="stats w-100">
     <div class="container bg-white p-4 rounded-1 shadow">
       <div class="row gy-4">
-
         <div class="col-md-4 col-12">
           <div class="num">
-            <p>{{counters[0].value}} +</p>
+            <p>{{ counters[0].value }} +</p>
             <span>مسطحات البناء</span>
           </div>
         </div>
 
         <div class="col-md-4 col-12">
           <div class="num">
-            <p> {{counters[1].value}} +</p>
+            <p>{{ counters[1].value }} +</p>
             <span>مساحة الأرض</span>
           </div>
         </div>
 
         <div class="col-md-4 col-12">
           <div class="num">
-            <p> {{counters[2].value}} +</p>
+            <p>{{ counters[2].value }} +</p>
             <span>الوحدات</span>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <h2 class="title">خدماتنا</h2>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-12 order-md-0 order-lg-0 order-0" data-aos="fade-left" data-aos-delay="100">
-        <div class="box">
-          <i class="far fa-house"></i>
-          <h3>الإستثمار العقاري</h3>
-          <p>
-            نوفر فرصًا استثمارية مدروسة بعناية تضمن عوائد مجزية ومستقرة على
-            المدى الطويل. نربط المستثمرين بالمشاريع العقارية الأنسب لرؤوس
-            أموالهم وأهدافهم.
-          </p>
+
+  <h2 class="title" data-title="خدماتنا" data-aos="fade-up">خدماتنا</h2>
+
+
+  <div class="services-section">
+    <div class="container">
+      <div class="text-center mb-5">
+      </div>
+
+      <div class="row g-4">
+        <!-- خدمة 1 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-card always-visible">
+            <img
+              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585401/interface_104_2_ysmw3f.webp"
+              alt="التطوير العقاري"
+            />
+            <div class="overlay">
+              <h3>الإستثمار العقاري</h3>
+              <p>
+                نوفر فرصًا استثمارية مدروسة بعناية تضمن عوائد مجزية ومستقرة على
+                المدى الطويل. نربط المستثمرين بالمشاريع العقارية الأنسب لرؤوس
+                أموالهم وأهدافهم.
+              </p>
+              <button class="btn-gold-sm" routerLink="/services">
+                اكتشف المزيد
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 col-12 order-md-0 order-lg-0 order-0" data-aos="fade-up" data-aos-delay="150">
-        <img src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585401/interface_104_2_ysmw3f.webp" alt="خدماتنا" loading="lazy"/>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-12 order-md-2 order-lg-0 order-0" data-aos="fade-right" data-aos-delay="200">
-        <div class="box">
-          <i class="fa-regular fa-building"></i>
-          <h3>التطوير العقاري</h3>
-          <p>
-            نحوّل الأفكار إلى مشاريع عقارية متكاملة من التصميم إلى التنفيذ، مع
-            التركيز على الجودة والاستدامة. نضمن تطوير مجتمعات حديثة تلبي
-            احتياجات العملاء وتواكب تطلعات السوق.
-          </p>
+        <!-- خدمة 2 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-card always-visible">
+            <img
+              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585400/room102_2_k9kbwy.jpg"
+              alt="التطوير العقاري"
+            />
+            <div class="overlay">
+              <h3>التطوير العقاري</h3>
+              <p>
+                نحوّل الأفكار إلى مشاريع عقارية متكاملة من التصميم إلى التنفيذ،
+                مع التركيز على الجودة والاستدامة. نضمن تطوير مجتمعات حديثة تلبي
+                احتياجات العملاء وتواكب تطلعات السوق.
+              </p>
+              <button class="btn-gold-sm" routerLink="/services">
+                اكتشف المزيد
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 col-12 order-md-1 order-lg-0 order-0" data-aos="fade-left" data-aos-delay="100">
-        <img src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585400/room102_2_k9kbwy.jpg" alt="خدماتنا" loading="lazy"/>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-12 order-md-3 order-lg-0 order-0" data-aos="fade-up" data-aos-delay="150">
-        <div class="box">
-          <i class="fa-regular fa-comment"></i>
-          <h3>الاستشارات العقارية</h3>
-          <p>
-            نقدم استشارات متخصصة لمساعدة العملاء في اتخاذ قرارات عقارية مبنية
-            على بيانات دقيقة ورؤية واضحة. ندعم عملاءنا بخبراتنا في السوق لضمان
-            أفضل النتائج في الشراء، البيع أو التطوير.
-          </p>
+        <!-- خدمة 3 -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-card always-visible">
+            <img
+              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585401/interface_102_2_ioircy.jpg"
+              alt="الاستشارات العقارية"
+            />
+            <div class="overlay">
+              <h3>الاستشارات العقارية</h3>
+              <p>
+                نقدم استشارات متخصصة لمساعدة العملاء في اتخاذ قرارات عقارية
+                مبنية على بيانات دقيقة ورؤية واضحة. ندعم عملاءنا بخبراتنا في
+                السوق لضمان أفضل النتائج في الشراء، البيع أو التطوير.
+              </p>
+              <button class="btn-gold-sm" routerLink="/services">اكتشف المزيد</button>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-12 order-md-4 order-lg-0 order-0" data-aos="fade-right" data-aos-delay="200">
-        <img src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585407/room103_1_npyibh.jpg" alt="خدماتنا" loading="lazy"/>
       </div>
     </div>
   </div>
 </section>
+
+<router-outlet></router-outlet>

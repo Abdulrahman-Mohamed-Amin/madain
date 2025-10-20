@@ -1,14 +1,6 @@
 <header class="">
   <div class="container d-flex justify-content-between align-items-center px-2">
-    @if (logo) {
-    <img
-      src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760708047/%D9%84%D9%88%D8%AC%D9%88_%D8%A7%D8%A8%D9%8A%D8%B6_%D9%A1%D9%A5%D9%A0_%D8%A8%D9%83%D8%B3%D9%84_cbm0mm.png"
-      alt="شعار الشركة"
-      style="width: 120px"
-      routerLink="/home"
-      loading="lazy"
-    />
-    }@else {
+  
     <img
       src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760708047/%D9%84%D9%88%D8%AC%D9%88_%D8%A7%D8%A8%D9%8A%D8%B6_%D9%A1%D9%A5%D9%A0_%D8%A8%D9%83%D8%B3%D9%84_cbm0mm.png"
       alt="شعار الشركة"
@@ -17,7 +9,6 @@
       loading="lazy"
     />
 
-    }
     <ul class="links" [ngClass]="{ open: open, close: open }">
       <li>
         <a routerLink="/home" routerLinkActive="active">الصفحة الرئيسية</a>
@@ -30,7 +21,7 @@
         <a [routerLink]="['/projects']" routerLinkActive="active">مشاريعنا </a>
       </li>
       <li style="cursor: pointer">
-        <a (click)="openContact = true ; open = true">اتصل بنا</a>
+        <a routerLink="/contact" routerLinkActive="active">تواصل معنا</a>
       </li>
     </ul>
     <i
@@ -41,35 +32,5 @@
 
 </header>
 
-<div
-  class="cont_lay"
-  [ngClass]="{ open_cont: openContact }"
-  (click)="openContact = false"
-></div>
 
-<div class="contact" [ngClass]="{ open_cont: openContact }" >
-  <i
-    class="fas fa-xmark position-absolute close_cont"
-    (click)="openContact = false"
-  ></i>
-  <div class="row align-items-center h-100">
-    <div class="col-4">
-      <div class="box" (click)="openWhatsApp()">
-        <i class="fab fa-whatsapp"></i>
-        <span>واتساب</span>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="box" (click)="openCall()">
-        <i class="fas fa-phone"></i>
-        <span>اتصال</span>
-      </div>
-    </div>
-    <div class="col-4">
-      <div class="box" (click)="sendEmail()">
-        <i class="fas fa-envelope"></i>
-        <span>ايميل</span>
-      </div>
-    </div>
-  </div>
-</div>
+
