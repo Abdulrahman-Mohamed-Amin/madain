@@ -152,23 +152,3 @@ header i {
 .open_cont{
    display: block;
 }
-
-/* .file{
-    background: var(--lighit1);
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    writing-mode: vertical-lr;
-    padding: 5px 7px;
-    font-size: 12px;
-    border-radius: 0 7px 7px 0;
-    font-weight: bold;
-    cursor: pointer;
-    color: black;
-    text-decoration: none;
-}
-.file:hover{
-    color: #fff;
-    background: var(--blue2);
-} */
