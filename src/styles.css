@@ -120,10 +120,10 @@ html, body {
 }
 @media(max-width:578px){
   .title{
-    font-size: 35px;
+    font-size: 40px;
   }
   .title::before{
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 }
 

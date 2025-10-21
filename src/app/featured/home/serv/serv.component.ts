@@ -13,13 +13,13 @@ export class ServComponent {
 
   
    counters = [
-    { value: 0, target: 13287 },
-    { value: 0, target: 2880 },
-    { value: 0, target: 75 }
+    { value: 0, target: 28123 },
+    { value: 0, target: 6086 },
+    { value: 0, target:159 }
   ];
 
   private started = false;
-  private duration = 3000;
+  private duration = 2000;
   private isBrowser: boolean;
 
   constructor(@Inject(PLATFORM_ID) private platformId: object) {
