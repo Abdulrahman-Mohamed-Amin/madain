@@ -3,7 +3,6 @@ import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { FormControl, FormGroup, Validators , ReactiveFormsModule } from '@angular/forms';
 import emailjs from 'emailjs-com';
-import { log } from 'console';
 
 @Component({
   selector: 'app-contact',

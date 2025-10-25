@@ -28,9 +28,6 @@ export class BayotComponent {
           dynamicBullets: true,
           dynamicMainBullets: 1,
         },
-        autoplay: {
-          delay: 4000,
-        },
         speed: 500,
       });
     }

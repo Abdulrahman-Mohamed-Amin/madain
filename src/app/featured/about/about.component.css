@@ -63,10 +63,12 @@
 
 .sec_2 img{
     border: 10px solid #fff;
-    outline: 2px solid var(--lighit1);
-    border-radius: 0 40px;
+    outline: 1px solid var(--lighit1);
     margin-bottom: 25px;
-    height: 450px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  height: 400px;
 }
 .box {
     text-align: center;
@@ -123,3 +125,62 @@ span i {
         font-size: 10px;
     }
 }
+
+
+
+
+
+
+
+
+.chairman-section {
+  background: #fff;
+  padding: 50px 20px;
+  direction: rtl;
+  font-family: 'Cairo', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex: 1 1 60%;
+  background-color: #fdfdfd;
+  padding: 25px;
+  border-right: 5px solid var(--lighit1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.text h2 {
+  color: var(--lighit2);
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.text blockquote {
+  font-size: 13px;
+  color: var(--blue2);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.signature {
+  margin-top: 30px;
+  color: var(--blue1);
+}
+
+.signature strong {
+  font-size: 16px;
+  color: var(--lighit2);
+}
+
+

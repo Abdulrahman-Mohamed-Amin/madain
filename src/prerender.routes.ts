@@ -3,11 +3,12 @@ export const prerenderRoutes = [
   '/home',
   '/about',
   '/services',
+  '/projects',
   '/contact',
-  '/blog',
-  '/blog/article-1',
-  '/blog/article-2',
-  '/products',
-  '/products/1',
-  '/products/2',
+  '/helm-101',
+  '/helm-102',
+  '/helm-103',
+  '/helm-104',
+  '/helm-105',
+  '/helm-106'
 ];

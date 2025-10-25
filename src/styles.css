@@ -40,6 +40,8 @@ html, body {
   overflow: hidden;
   transition: 0.3s;
   text-decoration: none;
+  display: inline-block;
+  /* width: fit-content; */
 }
 .btn_sp2::before {
   content: "";

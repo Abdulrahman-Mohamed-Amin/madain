@@ -58,8 +58,7 @@ section{
     width: 100%;
     height: 100%;
     border: 10px solid #fff;
-    outline: 3px solid var(--lighit1);
-    border-radius: 0 60px 0 60px;
+    outline: 1px solid var(--lighit1);
 }
 .img_cont::after{
     content: '';

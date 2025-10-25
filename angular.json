@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/madain",
+            "outputPath": "dist/madain/browser",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -22,20 +22,14 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-
               "node_modules/aos/dist/aos.css",
-                "node_modules/swiper/swiper-bundle.css",
+              "node_modules/swiper/swiper-bundle.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/aos/dist/aos.js"
-            ],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            ]
           },
           "configurations": {
             "production": {
@@ -61,18 +55,41 @@
           },
           "defaultConfiguration": "production"
         },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/madain/server",
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
         "prerender": {
           "builder": "@angular-devkit/build-angular:prerender",
           "options": {
             "browserTarget": "madain:build:production",
+            "serverTarget": "madain:server:production",
             "routes": [
               "/",
               "/home",
               "/about",
               "/services",
               "/contact",
-              "/projects"
+              "/projects",
+              "/helm-101",
+              "/helm-102",
+              "/helm-103",
+              "/helm-104",
+              "/helm-105",
+              "/helm-106"
             ]
+
           }
         },
         "serve": {
