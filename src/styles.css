@@ -154,7 +154,15 @@ html.en .madain img{
     right: 10px;
 
 }
-
+.madain_p{
+    font-size: 16px;
+    margin-top: 7px;
+}
+@media(max-width:578px){
+    .madain_p{
+        font-size: 12px;
+    }
+}
 .proj_title2{
 position: relative;
 color: var(--blue2);
@@ -177,6 +185,18 @@ html.ar .proj_title2::before {
 }
 html.en .proj_title2::before {
     left:0;
+
+}
+
+
+
+@media(max-width:991px){
+    html.ar .links{
+        left: 10px;
+    }
+    html.en .links{
+        right: 10px;
+    }
 
 }
 
