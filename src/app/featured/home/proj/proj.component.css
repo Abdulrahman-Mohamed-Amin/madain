@@ -34,11 +34,11 @@ section.w{
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 9px;
+  font-size: 11px;
   color: #fff;
   background: #f6b28181;
-  padding: 3px 0;
-  width: 70px;
+  padding: 3px 5px;
+  /* width: 70px; */
   border-radius: 5px;
   text-align: center;
 }

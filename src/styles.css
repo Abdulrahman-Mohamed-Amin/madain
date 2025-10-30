@@ -8,7 +8,7 @@
   font-family: "El Messiri", sans-serif;
   padding: 0;
   margin: 0;
-  direction: rtl;
+  /* direction: rtl; */
   box-sizing: border-box;
   transition: 0.3s;
 }
@@ -25,6 +25,10 @@ html, body {
   overflow-x: hidden;
 }
 
+
+ .swiper {
+  direction: ltr;
+}
 /* component  */
 
 .btn_sp2 {
@@ -129,7 +133,52 @@ html, body {
   }
 }
 
+/* language  */
 
+html.ar .bayot_text{
+  text-align: end;
+}
+
+@media(max-width:768px){
+  html.ar .bayot_text{
+  text-align: center;
+}
+}
+/* language  */
+
+html.ar .madain img{
+    left: 10px;
+
+}
+html.en .madain img{
+    right: 10px;
+
+}
+
+.proj_title2{
+position: relative;
+color: var(--blue2);
+width: fit-content;
+font-size: 20px;
+margin-bottom: 20px;
+}
+.proj_title2::before{
+    position: absolute;
+    content:'' ;
+    width: 40px;
+    height: 1px;
+    background: var(--lighit2);
+    bottom: -10px;
+}
+
+html.ar .proj_title2::before {
+    right:0;
+
+}
+html.en .proj_title2::before {
+    left:0;
+
+}
 
 
 

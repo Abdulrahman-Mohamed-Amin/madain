@@ -53,7 +53,7 @@
   height: 350px;
 }
 @media(max-width:768px){
-  .frame{
+  .frame , img{
     height: 250px;
   }
   .lead{
@@ -61,6 +61,9 @@
   }
   .lead2{
     font-size: 14px;
+  }
+  .bayot_text{
+    text-align: center;
   }
 }
 .swiper {

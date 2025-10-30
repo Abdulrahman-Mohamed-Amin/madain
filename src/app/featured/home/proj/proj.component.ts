@@ -1,6 +1,7 @@
 import { isPlatformBrowser, NgClass } from '@angular/common';
 import { Component, Inject, Input, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 Swiper.use([Navigation, Pagination, Autoplay]);
@@ -8,7 +9,7 @@ Swiper.use([Navigation, Pagination, Autoplay]);
 @Component({
   selector: 'app-proj',
   standalone: true,
-  imports: [RouterModule, NgClass],
+  imports: [RouterModule, NgClass , TranslateModule],
   templateUrl: './proj.component.html',
   styleUrl: './proj.component.css',
 })
@@ -18,7 +19,7 @@ export class ProjComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngAfterViewInit(): void {
+  async ngAfterViewInit(): Promise<void> {
     if (!isPlatformBrowser(this.platformId)) return;
     const swiper = new Swiper('.mySwiper', {
       breakpoints: {

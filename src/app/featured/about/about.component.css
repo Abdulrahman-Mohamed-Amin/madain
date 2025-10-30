@@ -16,6 +16,11 @@
 .sec_1 img{
     width: 450px;
 }
+@media(max-width:991px){
+.box {
+    text-align: center;
+}
+}
 @media(max-width:768px){
     .sec_1 h1 {
         font-size: 30px;
@@ -70,9 +75,7 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
   height: 400px;
 }
-.box {
-    text-align: center;
-}
+
 .sec_2 .box h3{
     font-size: 22px;
     color: var(--lighit1);

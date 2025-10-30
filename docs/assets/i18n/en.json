@@ -1,0 +1,236 @@
+{
+  "__header": "header",
+  "home": "Home",
+  "about": "about us",
+  "services": "services",
+  "projects": "projects",
+  "contact": "contact",
+
+  "landing": {
+    "name": "Madain Real Estate Company",
+    "landing_des": "Madain Real Estate Development Company is a leading real estate development company that provides innovative real estate solutions that meet the needs of our clients.",
+    "profile": "Profile"
+  },
+
+  "overview": {
+    "text": "Since the establishment of Madain Real Estate, we have been committed to providing integrated real estate services characterized by transparency and credibility, meeting our clients' needs with the highest quality. Our vision goes beyond project development to creating integrated residential environments. We aspire for Madain Real Estate to be a landmark in building sustainable, modern communities and a source of trust for all those seeking secure investment and continuous comfort. We don't just sell a property; we offer a comprehensive living experience, carefully crafted to complement our clients' ambitions and aspirations.",
+    "btn": "Learn more"
+  },
+
+  "vesion": {
+    "title": "Premium locations and extended warranties",
+    "des": "Madain Real Estate is a well-established Saudi company with strong foundations and extensive experience in the field of real estate development, marketing, and investment. It aims to achieve further expansion and spread, and to develop various and diverse real estate projects on a wide scale. It is keen to provide the best services in the field of real estate ownership and development in Jeddah and to facilitate the process of making sound decisions for our clients.",
+    "ves": "vision",
+    "ves_des": "To be a leading developer of sustainable and smart real estate projects in the Kingdom of Saudi Arabia, and to contribute to redefining the quality of housing and the integrated urban experience.",
+    "message": "message",
+    "message_des": "Developing integrated urban projects that meet the needs of the community and fulfill the aspirations of clients and investors, through innovative design, a commitment to quality, and full compliance with national regulations and standards."
+  },
+
+  "proj": {
+    "title": "Projects",
+    "view": "View Project ",
+    "status_ava": "available",
+    "status_under1": "Under construction",
+    "status_under2": "Under construction",
+    "status_soon": "soon",
+    "helm_101": {
+      "name": "Helm 101"
+    },
+    "helm_102": {
+      "name": "Helm 102"
+    },
+    "helm_103": {
+      "name": "Helm 103"
+    },
+    "helm_104": {
+      "name": "Helm 104"
+    },
+    "helm_105": {
+      "name": "Helm 105"
+    },
+    "helm_106": {
+      "name": "Retal"
+    },
+    "ozob": {
+      "name": "Ozoob El-Haram"
+    }
+  },
+
+  "stats": {
+    "build": "Building surfaces",
+    "land": "Land Area",
+    "units": "Units"
+  },
+
+  "serv": {
+    "title": "Services",
+    "find": "Find more",
+    "serv1": {
+      "name": "Real estate investment",
+      "des": "We provide carefully considered investment opportunities that guarantee profitable and stable returns over the long term. We connect investors with real estate projects best suited to their capital and goals."
+    },
+    "serv2": {
+      "name": "Real estate development",
+      "des": "We transform ideas into integrated real estate projects from design to implementation, with a focus on quality and sustainability. We ensure the development of modern communities that meet customer needs and keep pace with market aspirations."
+    },
+    "serv3": {
+      "name": "Real estate consulting",
+      "des": "We provide specialized consultations to help clients make real estate decisions based on accurate data and clear insights. We support our clients with our market expertise to ensure the best results when buying, selling, or developing.."
+    }
+  },
+
+  "quamn": {
+    "q1": {
+      "name": "Quality",
+      "des": "We are committed to providing real estate projects of high standards that achieve the comfort and well-being of our clients."
+    },
+    "q2": {
+      "name": "speed",
+      "des": "We complete sales transactions efficiently and quickly to save our customers' time."
+    },
+    "q3": {
+      "name": "Innovation",
+      "des": "We offer innovative real estate solutions that keep pace with market aspirations and meet future needs."
+    },
+    "q4": {
+      "name": "Trust",
+      "des": "We place transparency and trust at the foundation of our relationships with customers and partners."
+    }
+  },
+
+  "bayot": {
+    "sec1": {
+      "title": "Madain Signs a Memorandum of Understanding with Saudi Bayut",
+      "des1": "In a move that reflects our commitment to developing the digital real estate sector, Madain Real Estate Company has signed a strategic memorandum of understanding with Bayut, the leading real estate marketing platform in Saudi Arabia.",
+      "des2": "This partnership aims to enhance customer experience and expand our presence in the local market through innovative marketing solutions."
+    },
+    "sec2": {
+      "title": "Exclusive meeting with the General Manager",
+      "des": "In an exclusive interview with Bayut, General Manager outlined the company's next phase, emphasizing our commitment to innovation and digital transformation in the real estate sector. The discussion touched on our most notable achievements, expansion plans both inside and outside the Kingdom, and strategies to enhance the customer and investor experience through advanced technological solutions."
+    },
+    "sec3": {
+      "title": "Operations Manager's Speech",
+      "des": "In this speech, the CEO shares his vision for the company's future, reviewing the most notable achievements of the past period, along with future development and expansion plans. Reaffirming our commitment to excellence and innovation, we highlight the strategic directions that will lead us to new stages of success and sustainability."
+    }
+  },
+  "footer": {
+    "madain": "Madain, your dream of luxury housing starts with us",
+    "contact": "Contact",
+    "pages": "Pages",
+    "address": "Jeddah - Al-Salama District - Al-Yamamah Street - Al-Yamamah Business Center - Office 201"
+  },
+
+  "about_sec": {
+    "title": "About Us",
+    "title2": "Our values",
+    "name": "Mr. Taher Al-Muslih",
+    "jop": "General Manager",
+    "speech": "General Manager's Speech",
+    "des": "Saudi Arabia focuses on developing high-quality residential and commercial projects in line with the goals of Saudi Vision 2030, contributing to increasing ownership and monitoring comprehensive urban development. The company relies on development plans, starting with feasibility studies and identifying strategic locations, and moving into practical design, licensing, and implementation, staffing, and delivery, with full commitment to regulatory compliance, building availability, and post-sales recognition.",
+    "word1": "In the name of Allah, the Most Gracious, the Most Merciful, and peace and blessings be upon the most honorable of messengers, our master Muhammad, and upon all his family and companions. A journey of a thousand miles begins with a single step. Since the beginning of our work and with 20 years of experience, we have been moving forward to build the future with steps of hope, determination, and perseverance to achieve success and tangible accomplishments. We are proud to offer our real estate solutions that meet the needs of our brothers and sisters and support the vision of our beloved country, the Kingdom of Saudi Arabia's Vision 2030. Our ambition is for Madain Real Estate Development Company to be a fundamental pillar in the plan for prosperity and progress witnessed by the Kingdom.",
+    "word2": "We believe that real estate is more than just a building; it is an investment in the future. Since our inception, we have been focused on delivering projects that meet our clients' aspirations and contribute to strengthening the national economy. We strive, by the grace of God Almighty, to provide the finest services with a high level of quality, efficiency, and integrity. I thank God Almighty that He has blessed us in the Kingdom of Saudi Arabia with leaders who constantly strive to achieve the quality of life for citizens and residents, as enshrined in Vision 2030."
+  },
+
+  "services_sec": {
+    "title": "Services",
+    "item1": {
+      "title": "Real estate development",
+      "des": "We develop high-end residential and commercial projects that combine modern design with high quality, while adhering to the highest standards of sustainability."
+    },
+    "item2": {
+      "title": "Real estate investment",
+      "des": "We provide safe and profitable investment opportunities through a thorough study of the real estate market and specialized consultations that guarantee you the highest return."
+    },
+    "item3": {
+      "title": "Property Management",
+      "des": "Comprehensive solutions for property management, maintenance, and rent collection, ensuring peace of mind and a successful long-term investment."
+    },
+    "item4": {
+      "title": "Real estate marketing",
+      "des": "We use the latest digital marketing strategies and direct relationships to reach target customers and achieve the highest sales rate."
+    },
+    "item5": {
+      "title": "Real estate brokerage",
+      "des": "We provide professional brokerage services for buying, selling, and renting real estate, with an emphasis on reliability and service that meets the expectations of all parties."
+    },
+    "item6": {
+      "title": "Real estate consulting",
+      "des": "Our team provides feasibility studies and accurate market analyses to help you make informed, data-driven investment decisions."
+    }
+  },
+
+  "projects_sec": {
+    "title": "Projects"
+  },
+
+  "contact_sec": {
+    "title": "Contact",
+    "form": {
+      "title": "If you have any questions, please contact us.",
+      "name": "Full Name",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "send"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "phone": "Phone Number ",
+      "whats": "Whatsapp Number",
+      "loc": "Location",
+      "address": "Jeddah - Al-Salama District - Al-Yamamah Street"
+    }
+  },
+
+  "projects_info": {
+    "title1": "Project description",
+    "sub_title1":"Project advantages",
+    "title2": "Project location",
+    "sub_title2":"Location advantages",
+    "btn":"Location",
+    "gur":{
+      "g1":"Building structure",
+      "des1":"15-year warranty on the structural frame",
+      "g2":"Electricity guarantee",
+      "des2":"25-year warranty on circuit breakers",
+      "g3":"Plumbing and Electrical",
+      "des3":"3-year warranty on plumbing and electrical work",
+      "g4":"hidden flaws",
+      "des4":"3-year warranty against hidden defects"
+    },
+    "helm_101":{
+      "title":"Helm 101",
+      "des1":"The project consists of freehold apartments in Jeddah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a five-story residential building comprising 14 apartments of varying sizes.",
+      "des2":"Dream 101 project is located on Abdulrahman Al Sudairy Street, behind Al-Alik Al Bukhari Restaurant, and is distinguished by its proximity to a number of main roads such as Saqr Quraish Road, Prince Sultan Road, Sari Road, King Abdulaziz Road, and Medina Road."
+    },
+    "helm_102":{
+      "title":"Helm 102",
+      "des1":"The project consists of freehold apartments in Jeddah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a five-story residential building comprising 18 apartments of varying sizes.",
+      "des2":"Dream 102 project is located on two streets, Abdul Rahman Al Sudairy Street and Medina Road, and is distinguished by its proximity to a number of main roads such as Saqr Quraish Road, Prince Sultan Road, Sari Road, King Abdulaziz Road, and Medina Road."
+    },
+    "helm_103":{
+      "title":"Helm 103",
+      "des1":"The project consists of freehold apartments in Jeddah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a four-story residential building comprising 17 apartments of varying sizes.",
+
+      "des2":"Dream 103 project is located on Medina Road, close to King Abdulaziz Road, close to Prince Sultan Road, and close to Prince Sultan Road."
+    },
+    "helm_104":{
+      "title":"Helm 104",
+      "des1":"The project consists of freehold apartments in Makkah Al-Mukarramah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a six-story residential building comprising 26 apartments of varying sizes.",
+
+      "des2":"Dream 104 project is located on Abdulaziz bin Abdulrahman Bashir Street, on the Fourth Ring Road, behind Al-Habab bin Munther Street, on Al-Qadi Road"
+    },
+    "helm_105":{
+      "title":"Helm 105",
+      "des1":"The project consists of freehold apartments in Makkah Al-Mukarramah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a six-story residential building comprising 20 apartments of varying sizes.",
+
+      "des2":"Dream 105 project is located behind Abi Bin Thabit Al-Ansari Street and behind Tharwat Al-Mashaer Hotel and is located within the boundaries of the Holy Mosque and on the Fourth Ring Road."
+    },
+    "retal":{
+      "title":"Retal",
+      "des1":"The project consists of freehold apartments in Jeddah, strategically located, featuring a unique architectural design and spacious living spaces that provide added comfort and tranquility. The property consists of a six-story residential building comprising 18 apartments of varying sizes.",
+
+      "des2":"Dream 106 project is located in Jeddah on Asiya Al-Asadi Street, close to King Abdulaziz Road, close to Kahl Al-Azdi Street, and close to Hira Street."
+    }
+  }
+}

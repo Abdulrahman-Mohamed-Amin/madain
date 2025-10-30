@@ -1,6 +1,6 @@
 <section [ngClass]="title ? 'p' : 'w'">
   @if(title){
-    <h2 class="title" data-aos="fade-up" data-title="مشاريعنا">مشاريعنا</h2>
+    <h2 class="title" data-aos="fade-up" [attr.data-title]="'proj.title' | translate">{{"proj.title" | translate}}</h2>
   }
   <div class="container" data-aos="fade-up" data-aos-delay="500">
     <div class="swiper mySwiper">
@@ -13,12 +13,12 @@
                 alt="واجهة 101"
                 loading="lazy"
               />
-              <span>جاهز</span>
+              <span>{{"proj.status_ava" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 101</h3>
+              <h3>{{"proj.helm_101.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-101">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
             <div class="lay"></div>
@@ -33,12 +33,12 @@
                 alt="واجهة 102"
                 loading="lazy"
               />
-              <span>تحت التشطيب</span>
+              <span>{{"proj.status_under1" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 102</h3>
+              <h3>{{"proj.helm_102.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-102">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
           </div>
@@ -52,12 +52,12 @@
                 alt="واجهة 103"
                 loading="lazy"
               />
-              <span>تحت الإنشاء</span>
+              <span>{{"proj.status_under2" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 103</h3>
+              <h3>{{"proj.helm_103.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-103">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
           </div>
@@ -71,12 +71,12 @@
                 alt="واجهة 104"
                 loading="lazy"
               />
-              <span>تحت الإنشاء</span>
+              <span>{{"proj.status_under2" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 104</h3>
+              <h3>{{"proj.helm_104.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-104">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
           </div>
@@ -90,12 +90,12 @@
                 alt="واجة 105"
                 loading="lazy"
               />
-              <span>تحت الإنشاء</span>
+              <span>{{"proj.status_under2" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 105</h3>
+              <h3>{{"proj.helm_105.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-105">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
           </div>
@@ -109,12 +109,12 @@
                 alt="واجهة 106"
                 loading="lazy"
               />
-              <span>تحت الإنشاء</span>
+              <span>{{"proj.status_under2" | translate}}</span>
             </div>
             <div class="text">
-              <h3>حلم 106</h3>
+              <h3>{{"proj.helm_106.name" | translate}}</h3>
               <a class="btn_sp" routerLink="/helm-106">
-                <span>عرض المشروع</span></a
+                <span>{{"proj.view" | translate}}</span></a
               >
             </div>
           </div>
@@ -129,10 +129,10 @@
                 alt="واجهة عذوب"
                 loading="lazy"
               />
-              <span>قريبا . . .</span>
+              <span>{{"proj.status_soon" | translate}}</span>
             </div>
             <div class="text">
-              <h3>عذوب الحرم</h3>
+              <h3>{{"proj.ozob.name" | translate}}</h3>
             </div>
           </div>
         </div>

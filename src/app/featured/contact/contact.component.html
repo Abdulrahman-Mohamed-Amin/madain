@@ -3,56 +3,56 @@
     <app-header></app-header>
   </div>
   <div class="header">
-    <h1>تواصل معنا</h1>
+    <h1>{{"contact_sec.title" |translate}}</h1>
   </div>
   <div class="container">
     <div class="row gy-4">
       <div class="col-lg-6 col-12">
         <form class="form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-          <p class="form-title">اذا كان لديك أي استفسار قم بالتواصل معنا</p>
+          <p class="form-title">{{"contact_sec.form.title" |translate}}</p>
           <div class="input-container">
-            <input type="text" placeholder="الاسم الكامل" formControlName="name"/>
+            <input type="text" [placeholder]="'contact_sec.form.name' | translate" formControlName="name"/>
             <span> </span>
           </div>
           <div class="input-container">
-            <input type="text" placeholder="عنوان الرسالة" formControlName="subject"/>
+            <input type="text" [placeholder]="'contact_sec.form.subject' | translate" formControlName="subject"/>
           </div>
           <div class="input-container">
-            <textarea placeholder="رسالتك" formControlName="message"></textarea>
+            <textarea [placeholder]="'contact_sec.form.message' | translate" formControlName="message"></textarea>
           </div>
-          <button type="submit" class="submit">إرسال</button>
+          <button type="submit" class="submit">{{"contact_sec.form.send" | translate}}</button>
         </form>
       </div>
 
       <div class="col-lg-6 col-12 px-3">
         <div class="box text-white">
-          <h2>معلومات التواصل</h2>
+          <h2>{{"contact_sec.info.title" | translate}}</h2>
           <div class="item d-flex ">
             <i class="fas fa-envelope"></i>
             <div class="info">
-              <p>الايميل</p>
+              <p>{{"contact_sec.info.email" | translate}}</p>
               <p>marketing&#64;madain.sa</p>
             </div>
           </div>
           <div class="item d-flex ">
             <i class="fas fa-phone"></i>
             <div class="info">
-              <p>رقم الاتصال</p>
+              <p>{{"contact_sec.info.phone" | translate}}</p>
               <p>920016343</p>
             </div>
           </div>
           <div class="item d-flex">
             <i class="fab fa-whatsapp"></i>
             <div class="info">
-              <p>رقم الواتساب</p>
+              <p>{{"contact_sec.info.whats" | translate}}</p>
               <p>+996539885590</p>
             </div>
           </div>
           <div class="item d-flex">
             <i class="fas fa-location-dot"></i>
             <div class="info">
-              <p>الموقع</p>
-              <p>جدة - حي السلامة - شارع اليمامة</p>
+              <p>{{"contact_sec.info.loc" | translate}}</p>
+              <p>{{"contact_sec.info.address" | translate}}</p>
             </div>
           </div>
         </div>

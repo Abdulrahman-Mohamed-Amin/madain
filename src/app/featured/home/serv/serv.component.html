@@ -5,34 +5,38 @@
         <div class="col-md-4 col-12">
           <div class="num">
             <p>{{ counters[0].value }} +</p>
-            <span>مسطحات البناء</span>
+            <span>{{ "stats.build" | translate }}</span>
           </div>
         </div>
 
         <div class="col-md-4 col-12">
           <div class="num">
             <p>{{ counters[1].value }} +</p>
-            <span>مساحة الأرض</span>
+            <span>{{ "stats.land" | translate }}</span>
           </div>
         </div>
 
         <div class="col-md-4 col-12">
           <div class="num">
             <p>{{ counters[2].value }} +</p>
-            <span>الوحدات</span>
+            <span>{{ "stats.units" | translate }}</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <h2 class="title mt-5" data-title="خدماتنا" data-aos="fade-up">خدماتنا</h2>
-
+  <h2
+    class="title mt-5"
+    [attr.data-title]="'serv.title' | translate"
+    data-aos="fade-up"
+  >
+    {{ "serv.title" | translate }}
+  </h2>
 
   <div class="services-section">
     <div class="container">
-      <div class="text-center mb-5">
-      </div>
+      <div class="text-center mb-5"></div>
 
       <div class="row g-4">
         <!-- خدمة 1 -->
@@ -43,14 +47,12 @@
               alt="التطوير العقاري"
             />
             <div class="overlay">
-              <h3>الإستثمار العقاري</h3>
+              <h3>{{ "serv.serv1.name" | translate }}</h3>
               <p>
-                نوفر فرصًا استثمارية مدروسة بعناية تضمن عوائد مجزية ومستقرة على
-                المدى الطويل. نربط المستثمرين بالمشاريع العقارية الأنسب لرؤوس
-                أموالهم وأهدافهم.
+                {{ "serv.serv1.des" | translate }}
               </p>
               <button class="btn-gold-sm" routerLink="/services">
-                اكتشف المزيد
+                {{ "serv.find" | translate }}
               </button>
             </div>
           </div>
@@ -64,14 +66,12 @@
               alt="التطوير العقاري"
             />
             <div class="overlay">
-              <h3>التطوير العقاري</h3>
+              <h3>{{ "serv.serv2.name" | translate }}</h3>
               <p>
-                نحوّل الأفكار إلى مشاريع عقارية متكاملة من التصميم إلى التنفيذ،
-                مع التركيز على الجودة والاستدامة. نضمن تطوير مجتمعات حديثة تلبي
-                احتياجات العملاء وتواكب تطلعات السوق.
+                {{ "serv.serv2.des" | translate }}
               </p>
               <button class="btn-gold-sm" routerLink="/services">
-                اكتشف المزيد
+                {{ "serv.find" | translate }}
               </button>
             </div>
           </div>
@@ -85,13 +85,13 @@
               alt="الاستشارات العقارية"
             />
             <div class="overlay">
-              <h3>الاستشارات العقارية</h3>
+              <h3>{{ "serv.serv3.name" | translate }}</h3>
               <p>
-                نقدم استشارات متخصصة لمساعدة العملاء في اتخاذ قرارات عقارية
-                مبنية على بيانات دقيقة ورؤية واضحة. ندعم عملاءنا بخبراتنا في
-                السوق لضمان أفضل النتائج في الشراء، البيع أو التطوير.
+                {{ "serv.serv3.des" | translate }}
               </p>
-              <button class="btn-gold-sm" routerLink="/services">اكتشف المزيد</button>
+              <button class="btn-gold-sm" routerLink="/services">
+                {{ "serv.find" | translate }}
+              </button>
             </div>
           </div>
         </div>

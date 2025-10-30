@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { MetaService } from '../../core/meta.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-helm-101',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent , TranslateModule],
   templateUrl: './helm-101.component.html',
   styleUrl: './helm-101.component.css'
 })

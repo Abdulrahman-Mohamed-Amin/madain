@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/madain/browser",
+            "outputPath": "dist/madain",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -29,7 +29,12 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
               "node_modules/aos/dist/aos.js"
-            ]
+            ],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {
@@ -81,19 +86,13 @@
               "/about",
               "/services",
               "/contact",
-              "/projects",
-              "/helm-101",
-              "/helm-102",
-              "/helm-103",
-              "/helm-104",
-              "/helm-105",
-              "/helm-106"
+              "/projects"
             ]
-
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": { "poll": 1000 },
           "configurations": {
             "production": {
               "buildTarget": "madain:build:production"
@@ -114,7 +113,7 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
-                "glob": "**/*",
+                "glob": "*/",
                 "input": "public"
               }
             ],

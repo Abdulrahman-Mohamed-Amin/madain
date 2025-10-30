@@ -3,19 +3,14 @@
     <div class="row align-items-center gy-3">
       <div class="col-md-6 col-12 order-last order-md-0" data-aos="fade-up">
         <div class="box text">
-          <p class="text-center text-md-end">
-            منذ تأسيس مدائن العقارية حملنا على عاتقنا رسالة تقديم خدمات عقارية
-            متكاملة، تتسم بالشفافية والمصداقية وتلبي احتياجات عملائنا بأعلى
-            درجات الجودة. رؤيتنا تتجاوز فكرة تطوير المشاريع إلى خلق بيئات سكنية
-            متكاملة، حيث نطمح أن تكون مدائن العقارية علامة فارقة في بناء مجتمعات
-            عصرية مستدامة، ومصدر ثقة لكل من يبحث عن الاستثمار الآمن والراحة
-            المستمرة. نحن لا نبيع عقارًا فحسب، بل نقدّم تجربة حياة متكاملة تُصاغ
-            بعناية لتكون امتدادًا لطموحات عملائنا وتطلعاتهم.
+          <p class="">
+            {{ "overview.text" | translate }}
           </p>
 
-          <a routerLink="/about" class="text-center text-md-end d-block">
-            <span>اعرف المزيد</span>
-            <i class="fa-solid fa-angles-left"></i>
+          <a routerLink="/about" class=" d-block">
+            <span>{{"overview.btn" | translate}}</span>
+            <i [class]="getCurrent() == 'ar' ? 'fa-solid fa-angles-left' : 'fa-solid fa-angles-right'"></i>
+     
           </a>
         </div>
       </div>
@@ -33,5 +28,3 @@
     </div>
   </div>
 </section>
-
-

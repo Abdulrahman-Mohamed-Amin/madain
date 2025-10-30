@@ -16,22 +16,7 @@ margin-bottom: 70px;
     transform: translateX(-50%);
     bottom: -10px;
 }
-.proj_title2{
-position: relative;
-color: var(--blue2);
-width: fit-content;
-font-size: 20px;
-margin-bottom: 20px;
-}
-.proj_title2::before{
-    position: absolute;
-    content:'' ;
-    width: 40px;
-    height: 1px;
-    background: var(--lighit2);
-    right:0;
-    bottom: -10px;
-}
+
 /* sec_1 */
 
 .sec_1{

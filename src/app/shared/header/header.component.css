@@ -1,10 +1,11 @@
 
 header{
     background: transparent;
-
+    text-transform: capitalize;
 }
 header img{
     cursor: pointer;
+    transform: scaleZ(180deg);
 }
 .container{
         position: relative;
@@ -12,6 +13,7 @@ header img{
 .links{
     list-style: none;
     display: flex; 
+    align-items: center;
     gap: 25px;
     margin: 0;
 }
@@ -46,12 +48,13 @@ header i {
 .bar{
     cursor: pointer;
     transition: 0.3s;
+    font-size: 22px;
 }
 .bar:hover{
     color:var(--lighit1)
 }
 
-@media(max-width:768px){
+@media(max-width:991px){
     .links{
         background: #fff;
         position: absolute;
@@ -151,4 +154,20 @@ header i {
 }
 .open_cont{
    display: block;
+}
+
+
+.lang-btn {
+  padding: 2px 5px;
+  border: 1px solid var(--lighit1);
+  background-color: transparent;
+  color: var(--lighit1);
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lang-btn:hover {
+  background-color: var(--lighit1);
+  color: #fff;
 }

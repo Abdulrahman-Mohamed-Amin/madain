@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../../shared/header/header.component";
-import { RouterLink } from "@angular/router";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [HeaderComponent, RouterLink],
+  imports: [HeaderComponent , TranslateModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css'
 })

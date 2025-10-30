@@ -23,7 +23,7 @@
     "@angular/ssr": "^18.2.21",
     "@fortawesome/fontawesome-free": "^7.0.1",
     "@ngx-translate/core": "^17.0.0",
-    "@ngx-translate/http-loader": "^17.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.8",
     "emailjs-com": "^3.2.0",

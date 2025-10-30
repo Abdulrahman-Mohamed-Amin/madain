@@ -1,11 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from "@angular/router";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-serv',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule , TranslateModule],
   templateUrl: './serv.component.html',
   styleUrl: './serv.component.css'
 })

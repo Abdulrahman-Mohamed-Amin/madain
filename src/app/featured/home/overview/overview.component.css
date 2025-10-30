@@ -1,8 +1,9 @@
 
+
 .overview{
-    background: var(--blue2);
     color: #fff;
     padding: 40px 0; 
+    background: var(--blue2);
 }
 .overview .text p {
     line-height: 1.7;
@@ -23,6 +24,12 @@
     .overview .text p {
         font-size: 14px;
         line-height: 1.5;
+    }
+}
+
+@media(max-width:768px){
+    .overview  {
+        text-align: center;
     }
 }
 

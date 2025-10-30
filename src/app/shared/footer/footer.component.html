@@ -23,18 +23,16 @@
 
       <div class="col-lg-4 col-md-6 col-12">
         <div class="box">
-          <h3>التواصل</h3>
+          <h3>{{"footer.contact" | translate}}</h3>
           <ul>
             <li (click)="location()">
               <i class="fas fa-location-dot"></i>
-              <span
-                >جدة - حي السلامة - شارع اليمامة - مركز اليمامة للاعمال - مكتب
-                102</span
+              <span>{{"footer.address" | translate}}</span
               >
             </li>
             <li (click)="openWhatsApp()">
               <i class="fab fa-whatsapp"></i>
-              <span>0539885590</span>
+              <span>+996539885590</span>
             </li>
             <li (click)="openCall()">
               <i class="fas fa-phone"></i>
@@ -50,13 +48,13 @@
 
       <div class="col-lg-4 col-md-6 col-12">
         <div class="box">
-          <h3>الصفحات</h3>
+          <h3>{{"footer.pages" | translate}}</h3>
           <ul>
-            <li routerLink="/home">الصفحة الرئيسية</li>
-            <li routerLink="/about">من نحن</li>
-            <li routerLink="/services">خدماتنا</li>
-            <li routerLink="/projects">مشاريعنا</li>
-            <li routerLink="/contact">تواصل معنا</li>
+            <li routerLink="/home">{{"home" | translate}}</li>
+            <li routerLink="/about">{{"about" | translate}}</li>
+            <li routerLink="/services">{{"services" | translate}}</li>
+            <li routerLink="/projects">{{"projects" | translate}}</li>
+            <li routerLink="/contact">{{"contact" | translate}}</li>
           </ul>
         </div>
       </div>

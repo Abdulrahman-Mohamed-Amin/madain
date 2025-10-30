@@ -3,11 +3,12 @@ import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { QemnaComponent } from "../home/qemna/qemna.component";
 import { MetaService } from '../../core/meta.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, QemnaComponent],
+  imports: [HeaderComponent, FooterComponent, QemnaComponent , TranslateModule],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
