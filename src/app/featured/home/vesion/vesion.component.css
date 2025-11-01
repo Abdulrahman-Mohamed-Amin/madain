@@ -1,6 +1,7 @@
 
 section{
     padding: 60px 0 ;
+    
 }
 .box h2{
     color: var(--lighit2);
@@ -48,8 +49,7 @@ section{
 }
 
 .img_cont{
-    width: 100%;
-    height: 100%;
+    height: 400px;
     position: relative;
 }
 .img_cont img{
@@ -73,4 +73,15 @@ section{
     text-align: center;
 }
 
+
 }
+@media(max-width:768px){
+
+
+.img_cont{
+    height: 300px;
+}
+}
+
+
+

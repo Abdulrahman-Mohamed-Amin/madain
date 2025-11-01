@@ -28,6 +28,7 @@ section.w{
     height: 100%;
     object-fit: cover;
     object-position: center !important;
+    
 }
 
 .img_cont span {
@@ -80,3 +81,12 @@ section.w{
 ::ng-deep .swiper-pagination-bullet-active {
   background-color: var(--lighit2);
 }
+
+
+
+
+
+
+
+
+

@@ -95,4 +95,7 @@ footer li i {
   align-items: center;
   border-radius: 50%;
 }
-
+footer li:hover i{
+  background: #ce8c5b;
+  color: #fff;
+}

@@ -21,7 +21,8 @@ margin-bottom: 70px;
 
 .sec_1{
     position: relative;
-    height: 70vh;
+    height: 50vh;
+    background: var(--blue2);
 }
 .sec_1 img{
 position: absolute;

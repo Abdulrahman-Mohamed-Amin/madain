@@ -133,6 +133,19 @@ html, body {
   }
 }
 
+
+.size .hide{
+    display: none;
+}
+
+@media(max-width:768px){
+   .size .hide{
+        display: block;
+    }
+    .size .show{
+        display: none;
+    }
+}
 /* language  */
 
 html.ar .bayot_text{
