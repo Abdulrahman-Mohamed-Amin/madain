@@ -1,58 +1,83 @@
 <section>
+
   <div style="background: var(--blue2)">
     <app-header></app-header>
   </div>
   <div class="header">
-    <h1>{{"contact_sec.title" |translate}}</h1>
+    <h1>{{ "contact_sec.title" | translate }}</h1>
   </div>
   <div class="container">
     <div class="row gy-4">
       <div class="col-lg-6 col-12">
         <form class="form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
-          <p class="form-title">{{"contact_sec.form.title" |translate}}</p>
+          <p class="form-title">{{ "contact_sec.form.title" | translate }}</p>
           <div class="input-container">
-            <input type="text" [placeholder]="'contact_sec.form.name' | translate" formControlName="name"/>
-            <span> </span>
+            <input
+              type="text"
+              [placeholder]="'contact_sec.form.name' | translate"
+              formControlName="name"
+            />
+  
           </div>
           <div class="input-container">
-            <input type="text" [placeholder]="'contact_sec.form.subject' | translate" formControlName="subject"/>
+            <input
+              type="text"
+              [placeholder]="'contact_sec.form.email' | translate"
+              formControlName="email"
+            />
+            @if(contactForm.get('email')?.errors?.['email']){
+              <span class="error">{{"contact_sec.error" | translate}}</span>
+            }
           </div>
           <div class="input-container">
-            <textarea [placeholder]="'contact_sec.form.message' | translate" formControlName="message"></textarea>
+            <input
+              type="text"
+              [placeholder]="'contact_sec.form.subject' | translate"
+              formControlName="subject"
+            />
           </div>
-          <button type="submit" class="submit">{{"contact_sec.form.send" | translate}}</button>
+          <div class="input-container">
+            <textarea
+              [placeholder]="'contact_sec.form.message' | translate"
+              formControlName="message"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit" [disabled]="contactForm.invalid">
+            {{ "contact_sec.form.send" | translate }}
+          </button>
         </form>
       </div>
 
       <div class="col-lg-6 col-12 px-3">
         <div class="box text-white">
-          <h2>{{"contact_sec.info.title" | translate}}</h2>
-          <div class="item d-flex ">
+          <h2>{{ "contact_sec.info.title" | translate }}</h2>
+          <div class="item d-flex">
             <i class="fas fa-envelope"></i>
             <div class="info">
-              <p>{{"contact_sec.info.email" | translate}}</p>
+              <p>{{ "contact_sec.info.email" | translate }}</p>
               <p>marketing&#64;madain.sa</p>
             </div>
           </div>
-          <div class="item d-flex ">
+          <div class="item d-flex">
             <i class="fas fa-phone"></i>
             <div class="info">
-              <p>{{"contact_sec.info.phone" | translate}}</p>
+              <p>{{ "contact_sec.info.phone" | translate }}</p>
               <p>920016343</p>
             </div>
           </div>
           <div class="item d-flex">
             <i class="fab fa-whatsapp"></i>
             <div class="info">
-              <p>{{"contact_sec.info.whats" | translate}}</p>
+              <p>{{ "contact_sec.info.whats" | translate }}</p>
               <p>+996539885590</p>
             </div>
           </div>
           <div class="item d-flex">
             <i class="fas fa-location-dot"></i>
             <div class="info">
-              <p>{{"contact_sec.info.loc" | translate}}</p>
-              <p>{{"contact_sec.info.address" | translate}}</p>
+              <p>{{ "contact_sec.info.loc" | translate }}</p>
+              <p>{{ "contact_sec.info.address" | translate }}</p>
             </div>
           </div>
         </div>
@@ -60,6 +85,11 @@
     </div>
   </div>
 </section>
-
+<!-- Toast Message -->
+@if(toastMessage){
+<div class="custom-toast">
+  {{ "contact_sec.toastMessage" | translate }}
+</div>
+}
 
 <app-footer></app-footer>

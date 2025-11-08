@@ -25,6 +25,6 @@ export const routes: Routes = [
   { path: "helm-103", component: Helm103Component },
   { path: "helm-104", component: Helm104Component },
   { path: "helm-105", component: Helm105Component },
-  { path: "helm-106", component: Helm106Component },
+  { path: "retal", component: Helm106Component },
   { path: "**", component: HomeComponent }
 ];

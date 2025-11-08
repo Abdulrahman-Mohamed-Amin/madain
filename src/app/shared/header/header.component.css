@@ -160,14 +160,15 @@ header i {
 .lang-btn {
   padding: 2px 5px;
   border: 1px solid var(--lighit1);
-  background-color: transparent;
-  color: var(--lighit1);
+  background-color: var(--lighit1);
+  color: #fff;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .lang-btn:hover {
-  background-color: var(--lighit1);
-  color: #fff;
+  background-color: transparent;
+  color: var(--lighit1);
+ 
 }

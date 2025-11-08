@@ -165,9 +165,12 @@
 
   "contact_sec": {
     "title": "Contact",
+    "toastMessage":"Your message has been sent successfully.",
+    "error":"This email is uncorrect",
     "form": {
       "title": "If you have any questions, please contact us.",
       "name": "Full Name",
+      "email": "Email",
       "subject": "Subject",
       "message": "Message",
       "send": "send"
@@ -196,7 +199,7 @@
       "g3":"Plumbing and Electrical",
       "des3":"3-year warranty on plumbing and electrical work",
       "g4":"hidden flaws",
-      "des4":"3-year warranty against hidden defects"
+      "des4":"10-year warranty against latent defects from Malath Insurance Company"
     },
     "helm_101":{
       "title":"Helm 101",
