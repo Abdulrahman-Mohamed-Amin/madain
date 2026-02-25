@@ -1,98 +1,26 @@
 <div class="landing">
-  <div class="header">
+  <div class="header position-relative z-2">
     <app-header></app-header>
   </div>
-  <div
-    id="carouselExampleSlidesOnly"
-    class="carousel slide"
-    data-bs-ride="carousel"
-    data-bs-interval="2000"
-  >
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760602505/interfase_106_2_aw4qnc.jpg"
-          class="w-100 h-100 show"
-          alt="landing-img"
-        />
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760708024/%D8%B9%D8%B0%D9%88%D8%A8_%D8%A7%D9%84%D8%AD%D8%B1%D9%85_qgxpb6.png"
-          class="w-100 h-100 hide"
-          alt="landing-img"
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585411/interface_103_lrbrer.jpg"
-          class="w-100 h-100 show"
-          alt="landing-img"
-        />
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585414/1200_X_800_olqlwr.png"
-          class="w-100 h-100 hide"
-          alt="landing-img"
-        />
-      </div>
+  <div class="lay "></div>
 
-      <div class="carousel-item">
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585406/room102_7_hfybry.jpg"
-          class="w-100 h-100 show"
-          alt="landing-img"
-        />
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585412/room_1_nwtyy5.png"
-          class="w-100 h-100 hide"
-          alt="landing-img"
-        />
-      </div>
+  <div class="cont">
+    <div class="hero_text">
+      <h1 class="d-flex flex-column gap-3 align-items-start">
+        <span class="s1 mb-2"> {{'landing.name' | translate}}</span>
+        <span>
+          <span class="s2">{{'landing.s1' | translate}}</span> <span class="s3">{{'landing.s2' | translate}}</span>
+        </span>
+      </h1>
 
-      <div class="carousel-item">
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585400/room102_1_lyastj.jpg"
-          class="w-100 h-100 show"
-          alt="landing-img"
-        />
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585412/room2_llvyqb.png"
-          class="w-100 h-100 hide"
-          alt="landing-img"
-        />
-      </div>
-
-      <div class="carousel-item">
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585400/room103_2_axusmi.jpg"
-          class="w-100 h-100 show"
-          alt="landing-img"
-        />
-        <img
-          src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585412/room3_piaat1.png"
-          class="w-100 h-100 hide"
-          alt="landing-img"
-        />
-      </div>
-
-    </div>
-  </div>
-
-  <div class="lay"></div>
-
-  <div class="text">
-    <div class="hero-text">
-      <h1 class="hero-heading">{{ "landing.name" | translate }}</h1>
-      <p class="hero-subtext">
-        {{ "landing.landing_des" | translate }}
-      </p>
-
-      <div class="hero-buttons">
-        <a
-          href="https://drive.google.com/file/d/1hmw8qLuAJQiYcuduPOtVxkgKoDGNFcjJ/view?usp=sharing"
-          target="_blank"
-          class="btn_sp2"
-          >{{"landing.profile" |translate}}</a
-        >
+      <div class="btns">
+        <button class="proj_btn" routerLink="/projects">{{'landing.btn1' | translate}}</button>
+        <button class="contact_btn" routerLink="/contact">{{'landing.btn2' | translate}}</button>
       </div>
     </div>
+
   </div>
+
+  <img src="../../../../assets/down.svg" alt="" class="wave">
+
 </div>

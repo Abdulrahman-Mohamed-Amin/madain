@@ -1,19 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { HeaderComponent } from '../../shared/header/header.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { MetaService } from '../../core/meta.service';
 import { ProjComponent } from "../home/proj/proj.component";
 import { TranslateModule } from '@ngx-translate/core';
+import { ActivatedRoute } from '@angular/router';
+import { log } from 'console';
+import { ProjectsService } from '../../core/services/projects.service';
+import { Project } from '../../core/interface/project';
+import { CardComponent } from "../../shared/card/card.component";
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [ HeaderComponent, FooterComponent, ProjComponent ,TranslateModule],
+  imports: [HeaderComponent, FooterComponent, TranslateModule, CardComponent],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',
 })
-export class ProjectsComponent {
-  constructor(private meta: MetaService) {
+export class ProjectsComponent implements OnInit {
+  city: string | null = null
+
+  projects: Project[] = []
+  constructor(private meta: MetaService, private _route: ActivatedRoute, private _projects: ProjectsService) {
     this.meta.updateTags({
       title: 'مدائن العقارية | مشاريعنا',
       description:
@@ -22,5 +30,41 @@ export class ProjectsComponent {
       keywords:
         'عقارات, شركة مدائن العقارية, شقق تمليك جدة, فلل للبيع, مشاريع سكنية, شراء شقق, عقارات جدة',
     });
+  }
+
+  ngOnInit(): void {
+    this.getCity()
+  }
+
+  getCity() {
+    this._route.paramMap.subscribe(res => {
+      this.city = res.get('city')
+      this.getProjects()
+    })
+  }
+
+  getProjects() {
+    this._projects.getProjet().subscribe(res => {
+      this.projects = res
+      const all = res ?? [];
+
+      if (!this.city) {
+        this.projects = all;
+        return;
+      }
+
+      if (this.city === 'makkah') {
+        this.projects = all.filter(p => (p?.arLocationName ?? '').includes('مكة'));
+        return;
+      }
+
+      if (this.city === 'jeddah') {
+        this.projects = all.filter(p => (p?.arLocationName ?? '').includes('جدة'));
+        return;
+      }
+
+      // لو city قيمة غريبة
+      this.projects = all;
+    })
   }
 }

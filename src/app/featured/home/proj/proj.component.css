@@ -1,92 +1,9 @@
-section.p {
-  background-color: #f5f6f9;
-  padding: 60px 0 150px;
-}
-section.w{
-    padding: 80px 0;
-}
-@media (max-width: 768px) {
-  section.p {
-    padding: 60px 0 250px;
-  }
+section{
+  background: #f2f2f2;
 }
 
-.box{
-    box-shadow:var(--shadow);
-}
-.img_cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 300px;
-    padding: 5px;
-
-}
-
-.swiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center !important;
-    
-}
-
-.img_cont span {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 11px;
-  color: #fff;
-  background: #f6b28181;
-  padding: 3px 5px;
-  /* width: 70px; */
-  border-radius: 5px;
-  text-align: center;
-}
-
-.text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90px;
-    gap: 5px;
-}
-.text h3{
-    font-size: 22px;
-    color: var(--blue2);
-}
-.text a{
-    padding: 5px 10px ;
-    margin-bottom: 10px;
-}
-.swiper {
-  width: 100%;
-  height: 100%;
-  padding: 10px 10px 50px;
-}
-
-.swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: left top;
-}
-
-::ng-deep .swiper-pagination-bullet {
-  background-color: #000;
-  opacity: 0.5;
-}
-
-::ng-deep .swiper-pagination-bullet-active {
-  background-color: var(--lighit2);
-}
-
-
-
-
-
-
-
-
-
+ .btn_sp2{
+  width: fit-content;
+  display: block;
+  margin:30px auto 0;
+ }

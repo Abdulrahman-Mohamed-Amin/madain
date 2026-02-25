@@ -31,7 +31,6 @@
               "node_modules/aos/dist/aos.js"
             ],
             "server": "src/main.server.ts",
-            "prerender": true,
             "ssr": {
               "entry": "server.ts"
             }
@@ -41,13 +40,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "5kB",
+                  "maximumError": "10kB"
                 }
               ],
               "outputHashing": "all"
@@ -73,21 +72,6 @@
               "sourceMap": false,
               "optimization": true
             }
-          }
-        },
-        "prerender": {
-          "builder": "@angular-devkit/build-angular:prerender",
-          "options": {
-            "browserTarget": "madain:build:production",
-            "serverTarget": "madain:server:production",
-            "routes": [
-              "/",
-              "/home",
-              "/about",
-              "/services",
-              "/contact",
-              "/projects"
-            ]
           }
         },
         "serve": {

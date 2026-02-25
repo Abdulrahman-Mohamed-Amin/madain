@@ -2,9 +2,23 @@
 
 .overview{
     color: #fff;
-    padding: 40px 0; 
+    padding: 40px 0 40px; 
     background: var(--blue2);
+    background-image: url(../../../../assets/hero.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center left;
+    position: relative;
 }
+
+.lay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;left: 0;
+    background: linear-gradient(360deg , rgba(206, 141, 91, 1) 10% , rgba(206, 141, 91, 0.5) 60% , rgba(206, 141, 91, 0.2) 100%);
+}
+
 .overview .text p {
     line-height: 1.7;
     font-size: 18px;
@@ -13,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--lighit1);
+    color: var(--blue2);
     text-decoration: none;
 }
 .overview .text a:hover{

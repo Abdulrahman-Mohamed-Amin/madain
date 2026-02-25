@@ -18,7 +18,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       HttpClientModule,
       TranslateModule.forRoot({
-        defaultLanguage: 'ar', // ✅ لغة افتراضية
+        fallbackLang: 'ar', // ✅ لغة افتراضية
         loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,

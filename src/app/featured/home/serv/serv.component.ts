@@ -2,36 +2,51 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { TranslateModule } from '@ngx-translate/core';
+import { ServicesService } from '../../../core/services/services.service';
+import { Service } from '../../../core/interface/service';
+import { environment } from '../../../../environments/environment';
+import { LanguageService } from '../../../core/language.service';
 
 @Component({
   selector: 'app-serv',
   standalone: true,
-  imports: [RouterModule , TranslateModule],
+  imports: [RouterModule, TranslateModule],
   templateUrl: './serv.component.html',
   styleUrl: './serv.component.css'
 })
 export class ServComponent {
-
-  
-   counters = [
+  services: Service[] = []
+  url = environment.mediaUrl
+  lang:string = ''
+  counters = [
     { value: 0, target: 28123 },
     { value: 0, target: 6086 },
-    { value: 0, target:159 }
+    { value: 0, target: 159 }
   ];
 
   private started = false;
   private duration = 2000;
   private isBrowser: boolean;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: object) {
+  constructor(@Inject(PLATFORM_ID) private platformId: object, private _service: ServicesService , private _lang:LanguageService) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   ngOnInit() {
     if (this.isBrowser) {
-      // مراقبة ظهور السيكشن
       this.observeSection();
     }
+
+    this._lang.currentLang$.subscribe(res =>{
+      this.lang = res
+    })
+    this.getSevices()
+  }
+
+  getSevices() {
+    this._service.getService().subscribe(res =>{
+      this.services = res
+    })
   }
 
   private observeSection() {

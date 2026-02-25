@@ -1,55 +1,27 @@
-<section class="" data-aos="fade-up">
-  <div class="stats w-100">
-    <div class="container bg-white p-4 rounded-1 shadow">
-      <div class="row gy-4">
-        <div class="col-md-4 col-12">
-          <div class="num">
-            <p>{{ counters[0].value }} +</p>
-            <span>{{ "stats.build" | translate }}</span>
-          </div>
-        </div>
 
-        <div class="col-md-4 col-12">
-          <div class="num">
-            <p>{{ counters[1].value }} +</p>
-            <span>{{ "stats.land" | translate }}</span>
-          </div>
-        </div>
 
-        <div class="col-md-4 col-12">
-          <div class="num">
-            <p>{{ counters[2].value }} +</p>
-            <span>{{ "stats.units" | translate }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h2
-    class="title mt-5"
-    [attr.data-title]="'serv.title' | translate"
-    data-aos="fade-up"
-  >
-    {{ "serv.title" | translate }}
-  </h2>
-
-  <div class="services-section">
+  <div class="services-section p-60">
     <div class="container">
-      <div class="text-center mb-5"></div>
+
+      <div class="section-title">
+
+        <h2 class=" mt-5" [attr.data-title]="'serv.title' | translate" data-aos="fade-up">
+          {{ "serv.title" | translate }}
+        </h2>
+      </div>
+
 
       <div class="row g-4">
+        @for(service of services ; track $index){
         <!-- خدمة 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="service-card always-visible">
-            <img
-              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585401/interface_104_2_ysmw3f.webp"
-              alt="التطوير العقاري"
-            />
+            <img [src]="url + service.imagePaths[0]"
+              alt="التطوير العقاري" />
             <div class="overlay">
-              <h3>{{ "serv.serv1.name" | translate }}</h3>
+              <h3>{{lang == "ar" ? service.arTitle :service.enTitle}}</h3>
               <p>
-                {{ "serv.serv1.des" | translate }}
+                {{lang == "ar" ? service.arDescription :service.enDescription}}
               </p>
               <button class="btn-gold-sm" routerLink="/services">
                 {{ "serv.find" | translate }}
@@ -57,47 +29,10 @@
             </div>
           </div>
         </div>
-
-        <!-- خدمة 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-card always-visible">
-            <img
-              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585400/room102_2_k9kbwy.jpg"
-              alt="التطوير العقاري"
-            />
-            <div class="overlay">
-              <h3>{{ "serv.serv2.name" | translate }}</h3>
-              <p>
-                {{ "serv.serv2.des" | translate }}
-              </p>
-              <button class="btn-gold-sm" routerLink="/services">
-                {{ "serv.find" | translate }}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- خدمة 3 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="service-card always-visible">
-            <img
-              src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585401/interface_102_2_ioircy.jpg"
-              alt="الاستشارات العقارية"
-            />
-            <div class="overlay">
-              <h3>{{ "serv.serv3.name" | translate }}</h3>
-              <p>
-                {{ "serv.serv3.des" | translate }}
-              </p>
-              <button class="btn-gold-sm" routerLink="/services">
-                {{ "serv.find" | translate }}
-              </button>
-            </div>
-          </div>
-        </div>
+        }
       </div>
     </div>
   </div>
-</section>
+
 
 <router-outlet></router-outlet>

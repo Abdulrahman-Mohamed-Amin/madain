@@ -1,10 +1,10 @@
 section{
     background: #fff;
-    padding: 150px 0 80px 0;
-}
-
-.services-section {
-  background: #fff;
+    padding:80px 0;
+  }
+  
+  .services-section {
+    background: #fff;
   overflow: hidden;
 }
 

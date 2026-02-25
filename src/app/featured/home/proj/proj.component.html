@@ -1,150 +1,23 @@
-<section [ngClass]="title ? 'p' : 'w'">
-  @if(title){
-    <h2 class="title" data-aos="fade-up" [attr.data-title]="'proj.title' | translate">{{"proj.title" | translate}}</h2>
-  }
-  <div class="container" data-aos="fade-up" data-aos-delay="500">
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/f_auto,q_auto/v1760585404/interface_101_rse0mw.jpg"
-                alt="واجهة 101"
-                loading="lazy"
-              />
-              <span>{{"proj.status_ava" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_101.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/helm-101">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-            <div class="lay"></div>
-          </div>
-          
-        </div>
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/f_auto,q_auto/v1760585399/interface_102_otgrpo.jpg"
-                alt="واجهة 102"
-                loading="lazy"
-              />
-              <span>{{"proj.status_under1" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_102.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/helm-102">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585411/interface_103_lrbrer.jpg"
-                alt="واجهة 103"
-                loading="lazy"
-              />
-              <span>{{"proj.status_under2" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_103.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/helm-103">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1762350527/3_vwwi9w.jpg"
-                alt="واجهة 104"
-                loading="lazy"
-              />
-              <span>{{"proj.status_under2" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_104.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/helm-104">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1762346703/Helm_105_Night_1_srgxen.png"
-                alt="واجة 105"
-                loading="lazy"
-              />
-              <span>{{"proj.status_under2" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_105.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/helm-105">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1761996362/retal_interface1_j8w267.png"
-                alt="واجهة 106"
-                loading="lazy"
-              />
-              <span>{{"proj.status_under2" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.helm_106.name" | translate}}</h3>
-              <a class="btn_sp" routerLink="/retal">
-                <span>{{"proj.view" | translate}}</span></a
-              >
-            </div>
-          </div>
-        </div>
-
-
-        <div class="swiper-slide">
-          <div class="box bg-white">
-            <div class="img_cont">
-              <img
-                src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760602505/interfase_106_2_aw4qnc.jpg"
-                alt="واجهة عذوب"
-                loading="lazy"
-              />
-              <span>{{"proj.status_soon" | translate}}</span>
-            </div>
-            <div class="text">
-              <h3>{{"proj.ozob.name" | translate}}</h3>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-
-      <div class="swiper-pagination"></div>
+<section class="p-60 ">
+  <div class="container">
+    <div class="section-title">
+      <h2>{{'projects_sec.title' | translate}}</h2>
     </div>
+
+    <div class="row gy-4">
+
+      @for(project of projects.slice(0 , 6) ; track $index){
+
+      <div class="col-lg-4 col-md-6 col-12">
+        <app-card [project]="project"></app-card>
+      </div>
+      }
+
+    </div>
+    <button class="btn_sp2" routerLink="/projects">{{'projects_sec.btn' | translate}}</button>
   </div>
+
+
+
+
 </section>
-
-
-

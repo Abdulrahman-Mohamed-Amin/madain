@@ -5,83 +5,25 @@
 <div class="header">
   <h1 class="">{{"services_sec.title" |translate}}</h1>
 </div>
+<div class="container p-60">
 
-<section class="services-page">
+  @for(s of services ; track $index){
 
-  <!-- الخدمة 1 -->
-  <div class="service-block">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-city"></i></div>
-      <h2>{{"services_sec.item1.title" |translate}}</h2>
-      <p>
-{{"services_sec.item1.des" |translate}}
-      </p>
+    <div class="service">
+      <div class="img_cont">
+        <img [src]="url + s.imagePaths[0]" alt="">
+        <div class="lay"></div>
+      </div>
+  
+      <div class="text">
+        <h2>{{lang == "ar" ? s.arTitle : s.enTitle}}</h2>
+        <p>{{lang == "ar" ? s.arDescription : s.enDescription}}</p>
+      </div>
     </div>
-  </div>
+  }
 
-  <!-- الخدمة 2 -->
-  <div class="service-block alt">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-      <h2>{{"services_sec.item2.title" |translate}}</h2>
-      <p>
-{{"services_sec.item2.des" |translate}}
-      </p>
-    </div>
-  </div>
 
-  <!-- الخدمة 3 -->
-  <div class="service-block">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-house-user"></i></div>
-      <h2>{{"services_sec.item3.title" |translate}}</h2>
-      <p>
-{{"services_sec.item3.des" |translate}}
-      </p>
-    </div>
-  </div>
+</div>
 
-  <!-- الخدمة 4 -->
-  <div class="service-block alt">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-bullhorn"></i></div>
-      <h2>{{"services_sec.item4.title" |translate}}</h2>
-      <p>
-{{"services_sec.item4.des" |translate}}
-      </p>
-    </div>
-  </div>
-
-  <!-- الخدمة 5 -->
-  <div class="service-block">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-map-location-dot"></i></div>
-      <h2>{{"services_sec.item5.title" |translate}}</h2>
-      <p>
-{{"services_sec.item5.des" |translate}}
-      </p>
-    </div>
-  </div>
-
-  <!-- الخدمة 6 -->
-  <div class="service-block alt">
-    <div class="container text-center">
-      <div class="icon-box"><i class="fa-solid fa-users-gear"></i></div>
-      <h2>{{"services_sec.item6.title" |translate}}</h2>
-      <p>
-     {{"services_sec.item6.des" |translate}}
-      </p>
-    </div>
-  </div>
-
-</section>
 
 <app-footer></app-footer>
-
-
-
-
-
-
-
-

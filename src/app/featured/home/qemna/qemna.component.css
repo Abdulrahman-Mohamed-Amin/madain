@@ -61,6 +61,8 @@
   color: #666;
   margin: 0;
   line-height: 1.7;
+  width: 70%;
+  margin: auto;
 }
 
 
@@ -74,6 +76,14 @@
   .value-item {
     max-width: 300px;
   }
+}
+
+
+@media (max-width: 578px) {
+.value-item p {
+  width: 90%;
+  margin: auto;
+}
 }
 
 
