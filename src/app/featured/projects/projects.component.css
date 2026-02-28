@@ -55,26 +55,18 @@ img{
     font-size: 20px;
     margin-top: 10px;
 }
-/* .text .info {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-} */
-/* .text .info span{
-    font-size: 12px;
-    padding:2px 5px;
-    color: var(--blue1);
-    background: #00374841;
-    border-radius: 10px;
-    width: 60px;
-    margin-bottom: 10px;
-}
-.text p {
-    color: #777;
-    font-size: 13px;
-} */
+
 .text a{
     padding: 5px 10px;
     margin: 10px 0;
+}
+
+@media(max-width:578px){
+    .container{
+        padding: 80px 10px;
+    }
+    .header h1{
+    font-size: 30px;
+    color: #fff;
+}
 }

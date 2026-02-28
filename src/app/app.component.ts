@@ -36,30 +36,31 @@ export class AppComponent implements OnInit{
     });
 
     // الطريقة المفضّلة: استمع لأحداث Scroll من الراوتر (تضمن أن استعادة الـ scroll اكتملت)
-    // this.router.events.pipe(
-    //   filter(e => e instanceof Scroll)
-    // ).subscribe((e: Scroll) => {
-    //   // ننتظر الإطار التالي بعد انتهاء الـ scroll/layout ثم نعيد حساب AOS
-    //   // استخدام requestAnimationFrame مرتين يضمن أن DOM قد استقر
-    //   requestAnimationFrame(() => {
-    //     requestAnimationFrame(() => {
-    //       AOS.refresh(); // أخفّ من refreshHard
-    //     });
-    //   });
-    // });
+    this.router.events.pipe(
+      filter(e => e instanceof Scroll)
+    ).subscribe((e: Scroll) => {
+      // ننتظر الإطار التالي بعد انتهاء الـ scroll/layout ثم نعيد حساب AOS
+      // استخدام requestAnimationFrame مرتين يضمن أن DOM قد استقر
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          AOS.refresh(); // أخفّ من refreshHard
+        });
+      });
+    });
 
     // دعم احتياطي: لو لم تعمل Scroll events لأي سبب، نستخدم NavigationEnd كبديل
-  //   this.router.events.pipe(
-  //     filter(e => e instanceof NavigationEnd)
-  //   ).subscribe(() => {
-  //     // لو أنت تريد إجبار الصفحة للفوق:
-  //     window.scrollTo(0, 0);
+    
+    this.router.events.pipe(
+      filter(e => e instanceof NavigationEnd)
+    ).subscribe(() => {
+      // لو أنت تريد إجبار الصفحة للفوق:
+      window.scrollTo(0, 0);
 
-  //     // ننتظر قليلًا ثم نحدّث AOS
-  //     setTimeout(() => {
-  //       AOS.refresh();
-  //     }, 3000);
-  //   });
+      // ننتظر قليلًا ثم نحدّث AOS
+      setTimeout(() => {
+        AOS.refresh();
+      }, 3000);
+    });
   }
    
 

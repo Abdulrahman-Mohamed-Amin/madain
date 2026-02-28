@@ -261,7 +261,7 @@ html.en .section-header p{
   height: 35px;
   border-radius: 50%;
   background: var(--blue2);
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   padding: 5px;

@@ -152,6 +152,11 @@ h1 .s1::before {
   }
   .hero_text h1{
     font-size: 35px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .hero_text h1 .s1::before{
     height: 15px;
@@ -161,6 +166,9 @@ h1 .s1::before {
     font-size: 17px;
     padding: 8px 12px;
   }
+    .hero_text .s2{
+   line-height: 1.8;
+  }
 }
 
 @media(max-width:400px) {
@@ -169,10 +177,15 @@ h1 .s1::before {
   }
   .hero_text{
     width: 90%;
+    
+  }
+  .hero_text .s1{
+    font-size: 28px;
   }
 
   .hero_text h1{
-    font-size: 25px;
+    font-size: 16px;
+ 
   }
   .hero_text h1 .s1::before{
     height: 10px;
@@ -180,6 +193,6 @@ h1 .s1::before {
   }
   .btns button{
     font-size: 15px;
-    padding: 5px 10px;
+    padding: 8px 10px;
   }
 }
