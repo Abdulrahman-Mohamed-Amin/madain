@@ -168,7 +168,26 @@
   },
   "projects_sec": {
     "title": "Projects",
-    "btn": "More Projects"
+    "btn": "More Projects",
+    "location":{
+      "title":"Why this place?",
+      "box1":{
+        "head": "Prime location", 
+        "des":"Close to essential services" 
+      },
+      "box2":{
+        "head": "Easy access", 
+        "des":"Nearby exits and roads" 
+      },
+      "box3":{
+        "head": "Residential environment", 
+        "des":"Family-friendly area" 
+      },
+      "box4":{
+        "head": "Higher value", 
+        "des":"A location that enhances the project's appeal." 
+      }
+    }
   },
   "contact_sec": {
     "title": "Contact",

@@ -1,8 +1,8 @@
 @if(project?.projectStatusArName !== "قريبا"){
 <div class="pCard position-relative" data-aos="fade-up" data-aos-delay="400">
     @if (project?.isSealed) {
-    <div class="ribbon" [ngClass]="{'ribbon-top-left': lang == 'ar' , 'ribbon-top-right': lang == 'en'} "><span>مباع
-            بالكامل</span></div>
+    <div class="ribbon" [ngClass]="{'ribbon-top-left': lang == 'ar' , 'ribbon-top-right': lang == 'en'} ">
+        <span>{{lang == "ar" ? "مباع بالكامل" : "Sold Out"}}</span></div>
     }
     <div class="pCard__media">
         <img [src]="url + project?.interfaceImagePath" alt="مشروع" />
@@ -54,12 +54,23 @@
         <div class="img_cont position-absolute text-center text-white">
             <img [src]="url + project?.interfaceImagePath" alt="مشروع" />
             <div class="lay"></div>
+                    <div class="pCard__top">
+            <span class="tag tag--loc position-relative  z-3">{{lang == "ar" ? project?.arLocationName :
+                project?.enLocationName}}</span>
+            <span class="tag " [ngClass]="{
+  'tag--sold': project?.projectStatusArName === 'مباع',
+  'tag--status': project?.projectStatusArName === 'جاهز',
+  'tag--under': project?.projectStatusArName === 'تحت التشطيب',
+  'tag--under-c': project?.projectStatusArName === 'تحت الانشاء'
+}">{{lang == "ar" ? project?.projectStatusArName : project?.projectStatusEnName}}</span>
+        </div>
             <div class="soon_div">
                 <img src="../../../assets/logo.png" alt="">
-                <h2>{{project?.arTitle}}</h2>
+                <h2>{{lang == 'ar' ? project?.arTitle :project?.enTitle}}</h2>
 
-                <h6>قريبا ...</h6>
+                <h6>{{lang == "ar" ? "قريبا ..." : "Soon ..."}}</h6>
             </div>
+            
         </div>
 
     </div>
