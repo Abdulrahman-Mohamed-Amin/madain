@@ -12,11 +12,12 @@ import { MetaService } from '../../../core/meta.service';
 import { ProjecttypesComponent } from "../projecttypes/projecttypes.component";
 import { StatesComponent } from "../states/states.component";
 import { NewsComponent } from "../news/news.component";
+import { PartnersComponent } from "../../partners/partners.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [LandingComponent, OverviewComponent, ServComponent, QemnaComponent, VesionComponent, FooterComponent, MadainComponent, ProjComponent, ProjecttypesComponent, StatesComponent, NewsComponent],
+  imports: [LandingComponent, OverviewComponent, ServComponent, QemnaComponent, VesionComponent, FooterComponent, MadainComponent, ProjComponent, ProjecttypesComponent, StatesComponent, NewsComponent, PartnersComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -3,8 +3,89 @@
   <div style="background: var(--blue2)">
     <app-header></app-header>
   </div>
-  <div class="header">
+  <div class="header d-flex flex-column gap-4">
     <h1>{{ "contact_sec.title" | translate }}</h1>
+
+    <div class="contact-section">
+      <button class="meeting-btn" (click)="openMeetingModal()">
+        طلب اجتماع
+      </button>
+    </div>
+
+    @if(isMeetingOpen){
+
+      <div class="meeting-modal">
+        <div class="modal-overlay" (click)="closeMeetingModal()"></div>
+  
+        <div class="modal-content">
+  
+          <div class="modal-header">
+            <h2>طلب اجتماع</h2>
+            <button class="close-btn" (click)="closeMeetingModal()">✕</button>
+          </div>
+  
+          <form class="meeting-form">
+  
+            <div class="form-grid">
+  
+              <div class="form-group">
+                <label>الاسم الكامل *</label>
+                <input type="text">
+              </div>
+  
+              <div class="form-group">
+                <label>رقم الجوال *</label>
+                <input type="tel" placeholder="05xxxxxxxx">
+              </div>
+  
+              <div class="form-group">
+                <label>البريد الإلكتروني *</label>
+                <input type="email">
+              </div>
+  
+              <div class="form-group">
+                <label>الغرض من الاجتماع *</label>
+                <input type="text">
+              </div>
+  
+              <div class="form-group full-width">
+                <label>نوع العميل *</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="clientType"> فرد</label>
+                  <label><input type="radio" name="clientType"> مقاول</label>
+                  <label><input type="radio" name="clientType"> مطور</label>
+                </div>
+              </div>
+  
+              <div class="form-group full-width">
+                <label>نوع الاجتماع *</label>
+                <div class="radio-group">
+                  <label><input type="radio" name="meetingType"> زيارة</label>
+                  <label><input type="radio" name="meetingType"> أون لاين</label>
+                </div>
+              </div>
+  
+              <div class="form-group">
+                <label>التاريخ *</label>
+                <input type="date">
+              </div>
+  
+              <div class="form-group">
+                <label>الوقت *</label>
+                <input type="time">
+              </div>
+  
+            </div>
+  
+            <button type="submit" class="submit-btn">
+              إرسال
+            </button>
+  
+          </form>
+  
+        </div>
+      </div>
+    }
   </div>
   <div class="container">
     <div class="row gy-4">
@@ -12,35 +93,20 @@
         <form class="form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
           <p class="form-title">{{ "contact_sec.form.title" | translate }}</p>
           <div class="input-container">
-            <input
-              type="text"
-              [placeholder]="'contact_sec.form.name' | translate"
-              formControlName="name"
-            />
-  
+            <input type="text" [placeholder]="'contact_sec.form.name' | translate" formControlName="name" />
+
           </div>
           <div class="input-container">
-            <input
-              type="text"
-              [placeholder]="'contact_sec.form.email' | translate"
-              formControlName="email"
-            />
+            <input type="text" [placeholder]="'contact_sec.form.email' | translate" formControlName="email" />
             @if(contactForm.get('email')?.errors?.['email']){
-              <span class="error">{{"contact_sec.error" | translate}}</span>
+            <span class="error">{{"contact_sec.error" | translate}}</span>
             }
           </div>
           <div class="input-container">
-            <input
-              type="text"
-              [placeholder]="'contact_sec.form.subject' | translate"
-              formControlName="subject"
-            />
+            <input type="text" [placeholder]="'contact_sec.form.subject' | translate" formControlName="subject" />
           </div>
           <div class="input-container">
-            <textarea
-              [placeholder]="'contact_sec.form.message' | translate"
-              formControlName="message"
-            ></textarea>
+            <textarea [placeholder]="'contact_sec.form.message' | translate" formControlName="message"></textarea>
           </div>
 
           <button type="submit" class="submit" [disabled]="contactForm.invalid">
@@ -56,7 +122,7 @@
             <i class="fas fa-envelope"></i>
             <div class="info">
               <p>{{ "contact_sec.info.email" | translate }}</p>
-              <p>marketing&#64;madain.sa</p>
+              <p>info&#64;madain.sa</p>
             </div>
           </div>
           <div class="item d-flex">

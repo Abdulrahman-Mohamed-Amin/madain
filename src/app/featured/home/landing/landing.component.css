@@ -34,7 +34,7 @@
 
 h1 .s1 {
     position: relative;
-    z-index: 0; /* بدل 1 */
+    z-index: 0; 
     width: fit-content;
 }
 

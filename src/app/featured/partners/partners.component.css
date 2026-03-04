@@ -1,0 +1,17 @@
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 50px;
+  /* margin-top: 50px; */
+}
+
+
+.swiper .swiper-slide img {
+  width: 100px;       /* العرض اللي انت عايزه */
+  height: 100px;      /* الطول نفسه */
+  object-fit: contain; /* يحافظ على الصورة كاملة بدون قطع */
+}
+.swiper-slide{
+ 
+}

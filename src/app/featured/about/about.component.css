@@ -4,7 +4,6 @@
   background-size: cover;
   background-position: center right;
 }
-
 .text_header {
   position: absolute;
   top: 40%;
@@ -12,14 +11,12 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-
 .sec_1 {
   color: #fff;
   position: relative;
   height: 80vh;
 
 }
-
 .lay {
   position: absolute;
   top: 0;
@@ -28,30 +25,23 @@
   width: 100%;
   height: 100%;
 }
-
 .sec_1 h1 {
   text-align: center;
   margin: 35px 0 30px;
   font-size: 50px;
 }
-
 .sec_1 p {
   line-height: 1.8;
   font-size: 16px;
 }
-
-
-
 .vision-section {
   padding: 20px 20px;
 }
-
 .vision-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
-
 .vision-card {
   background: #fff;
   border-radius: 18px;
@@ -62,12 +52,10 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
   transition: all .35s ease;
 }
-
 .vision-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 50px rgba(0, 55, 72, 0.18);
 }
-
 .vision-icon {
   min-width: 50px;
   height: 50px;
@@ -77,66 +65,55 @@
   align-items: center;
   justify-content: center;
 }
-
 .vision-icon i {
   color: #fff;
   font-size: 26px;
 }
-
 .vision-content h2 {
   font-size: 24px;
   font-weight: 800;
   color: #003748;
   margin-bottom: 12px;
 }
-
 .vision-content p {
   color: #555;
   line-height: 1.9;
   font-size: 15.5px;
 }
-
 /* mobile */
 @media (max-width:992px) {
   .vision-grid {
     grid-template-columns: 1fr;
   }
 }
-
 @media(max-width:991px) {
   .box {
     text-align: center;
   }
 }
-
 @media(max-width:768px) {
   .sec_1 h1 {
     font-size: 30px;
   }
-
   .sec_1 p {
     font-size: 12px;
     line-height: 1.5;
   }
-
   .sec_1 img {
     width: 300px;
   }
-
   .text_header p {
     font-size: 13px;
     width: 90%;
     margin: auto;
   }
 }
-
 @media(max-width:578px) {
   .sec_1 {
 
     height: 100vh;
 
   }
-
   .vision-card {
     background: #fff;
     border-radius: 18px;
@@ -147,46 +124,15 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.07);
     transition: all .35s ease;
   }
-
   .vision-card p {
     font-size: 12px;
   }
-
   .sec_1 p {
     line-height: 1.6;
     font-size: 12px;
   }
 }
-
-
-
 /* الادارة العليا  */
-
-
-
-:root {
-  --lighit1: #F6B281;
-  --lighit2: #CE8C5B;
-  --blue1: #005773;
-  --blue2: #003748;
-
-  --bg: #ffffff;
-  --text: #0f2330;
-  --muted: #6c7a86;
-  --card: #ffffff;
-  --border: rgba(0, 0, 0, 0.06);
-  --shadow: 0 18px 40px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  color: var(--text);
-}
-
 .team {
   padding: 80px 16px 90px;
   background: radial-gradient(1200px 400px at 50% 0%,
@@ -195,17 +141,14 @@ body {
   background: #fff;
   text-transform: capitalize;
 }
-
 .team__container {
   max-width: 1180px;
   margin: 0 auto;
 }
-
 .team__header {
   text-align: center;
   margin-bottom: 30px;
 }
-
 .team__kicker {
   display: inline-block;
   font-size: 12px;
@@ -215,7 +158,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .team__title {
   margin: 0;
   font-size: clamp(34px, 4vw, 56px);
@@ -223,7 +165,6 @@ body {
   color: var(--blue2);
   line-height: 1.05;
 }
-
 .team__subtitle {
   margin: 18px auto 0;
   max-width: 720px;
@@ -231,14 +172,12 @@ body {
   font-size: 16px;
   line-height: 1.9;
 }
-
 .team__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 34px;
   align-items: stretch;
 }
-
 .team-card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -249,12 +188,10 @@ body {
   position: relative;
   transition: transform .25s ease, box-shadow .25s ease;
 }
-
 .team-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.10), 0 6px 16px rgba(0, 0, 0, 0.06);
 }
-
 .team-card__media {
   width: 220px;
   height: 170px;
@@ -263,7 +200,6 @@ body {
   display: grid;
   place-items: center;
 }
-
 .blob {
   position: absolute;
   width: 230px;
@@ -274,19 +210,15 @@ body {
   transform: rotate(-8deg);
   box-shadow: 0 18px 30px rgba(206, 140, 91, 0.18) inset;
 }
-
 .blob--a {
   transform: rotate(-10deg) translateX(-4px);
 }
-
 .blob--b {
   transform: rotate(8deg) translateX(6px);
 }
-
 .blob--c {
   transform: rotate(-6deg) translateX(4px);
 }
-
 .ring {
   position: absolute;
   width: 160px;
@@ -295,7 +227,6 @@ body {
   background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, .95), rgba(255, 255, 255, .65));
   box-shadow: 0 16px 26px rgba(0, 0, 0, 0.12);
 }
-
 .ring::before {
   content: "";
   position: absolute;
@@ -304,7 +235,6 @@ body {
   border: 3px solid rgba(255, 255, 255, 0.92);
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.06);
 }
-
 .avatar {
   position: relative;
   width: 130px;
@@ -314,13 +244,11 @@ body {
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.16);
   transform: translateY(2px);
 }
-
 .team-card__name {
   margin: 12px 0 6px;
   font-size: 20px;
   color: var(--blue2);
 }
-
 .team-card__role {
   margin: 0;
   font-size: 12px;
@@ -328,7 +256,6 @@ body {
   text-transform: uppercase;
   color: var(--lighit2);
 }
-
 .team-card__dash {
   display: inline-block;
   width: 44px;
@@ -337,57 +264,36 @@ body {
   margin-top: 12px;
   background: linear-gradient(90deg, rgba(246, 178, 129, .4), rgba(206, 140, 91, .9));
 }
-
-/* Responsive */
 @media (max-width: 980px) {
   .team__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
 @media (max-width: 620px) {
   .team {
     padding: 60px 14px 70px;
   }
-
   .team__grid {
     grid-template-columns: 1fr;
   }
-
   .team-card__media {
     width: 210px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 /* كلمة رئيس مجلس الادارة  */
-
-
 .chairman-section {
   background: #fff;
-  /* padding: 50px 20px; */
 }
-
 .container {
   max-width: 1200px;
   margin: auto;
 }
-
 .content {
   display: flex;
   gap: 30px;
   align-items: flex-start;
   flex-wrap: wrap;
 }
-
 .text {
   flex: 1 1 60%;
   background-color: #fdfdfd;
@@ -395,31 +301,25 @@ body {
   border-right: 5px solid var(--lighit1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
-
 .text h2 {
   color: var(--lighit2);
   font-size: 28px;
   margin-bottom: 20px;
 }
-
 .text blockquote {
   font-size: 13px;
   color: var(--blue2);
   line-height: 1.5;
   margin: 0;
 }
-
 .signature {
   margin-top: 30px;
   color: var(--blue1);
 }
-
 .signature strong {
   font-size: 16px;
   color: var(--lighit2);
 }
-
-
 .sec_2 img {
   border: 10px solid #fff;
   outline: 1px solid var(--lighit1);
@@ -429,119 +329,92 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
   height: 400px;
 }
-
 .sec_2 .box h3 {
   font-size: 22px;
   color: var(--lighit1);
 }
-
 .sec_2 .box p {
   color: var(--blue2);
 }
-
 .quit {
   font-size: 13px;
   line-height: 1.8;
   color: #333;
   padding: 20px;
 }
-
 .quit h2 {
   color: var(--lighit2);
   margin-bottom: 30px;
 }
-
 span i {
   color: var(--blue2);
   font-size: 20px;
 }
-
 .up {
   top: 0;
   right: -30px;
   margin-left: 10px;
 }
-
 .down {
   margin-right: 10px;
 }
-
 @media(max-width:991px) {
   .sec_2 img {
     height: 300px;
     width: 50%;
   }
-
-
 }
-
 @media(max-width:768px) {
   .sec_2 img {
     height: 300px;
     width: 50%;
   }
-
   .quit {
     padding: 0;
   }
-
 }
-
 @media(max-width:578px) {
   .sec_2 .box h3 {
     font-size: 16px;
   }
-
   .sec_2 .box p {
     font-size: 13px;
   }
-
   .quit h2 {
     font-size: 17px;
   }
-
   .quit span {
     font-size: 10px;
   }
-
   .sec_2 img {
     height: 300px;
     width: 80%;
   }
 }
-
-
-
 /* قيمنا  */
-
 .values-section {
   padding: 100px 20px;
   background: #f9fafb;
 }
-
 .section-header {
   text-align: center;
   margin-bottom: 60px;
 }
-
 .section-header h2 {
   font-size: 36px;
   font-weight: 800;
   color: #003748;
   margin-bottom: 15px;
 }
-
 .section-header p {
   color: #666;
   font-size: 16px;
 }
-
 .values-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-
 .value-box {
   background: #ffffff;
   padding: 40px 30px;
@@ -551,16 +424,13 @@ span i {
   position: relative;
   overflow: hidden;
 }
-
 .value-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 40px rgba(0, 55, 72, 0.15);
 }
-
 .value-box .icon {
   width: 60px;
   height: 60px;
-  /* background: linear-gradient(135deg, #005773, #003748); */
   background: var(--lighit2);
   border-radius: 12px;
   display: flex;
@@ -568,25 +438,21 @@ span i {
   justify-content: center;
   margin-bottom: 20px;
 }
-
 .value-box .icon i {
   color: #fff;
   font-size: 22px;
 }
-
 .value-box h3 {
   font-size: 20px;
   font-weight: 700;
   color: #003748;
   margin-bottom: 15px;
 }
-
 .value-box p {
   color: #555;
   font-size: 15px;
   line-height: 1.7;
 }
-
 /* Responsive */
 @media (max-width: 992px) {
   .values-grid {
