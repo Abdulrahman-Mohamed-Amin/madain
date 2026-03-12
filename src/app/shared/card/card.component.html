@@ -36,10 +36,13 @@
 
     <div class="pCard__bottom">
         @if(project?.projectStatusArName !== "قريبا"){
-        <button [routerLink]="['/project' , project?.id] ">{{'card.more' | translate}} <i
+        @if(project){
+                    <button (click)="openProject(project)">{{'card.more' | translate}} <i
                 class="fas fa-arrow-left"></i></button>
+        }
         }@else {
-        <button disabled class="pBtn">{{project?.projectStatusArName}} </button>
+        <button disabled class="pBtn">{{lang == 'ar' ? project?.projectStatusArName : project?.projectStatusEnName}}
+        </button>
 
         }
     </div>
@@ -61,8 +64,7 @@
                 <span class="tag " [ngClass]="{
   'tag--sold': project?.projectStatusArName === 'مباع',
   'tag--status': project?.projectStatusArName === 'جاهز',
-  'tag--under': project?.projectStatusArName === 'تحت التشطيب',
-  'tag--under-c': project?.projectStatusArName === 'تحت الانشاء'
+  'tag--under': project?.projectStatusArName === 'على الخارطة'
 }">{{lang == "ar" ? project?.projectStatusArName : project?.projectStatusEnName}}</span>
             </div>
             <div class="soon_div">
@@ -77,13 +79,8 @@
     </div>
 
     <div class="pCard__bottom">
-        @if(project?.projectStatusArName !== "قريبا"){
-        <button [routerLink]="['/project' , project?.id] ">{{'card.more' | translate}} <i
-                class="fas fa-arrow-left"></i></button>
-        }@else {
-        <button disabled class="pBtn">{{project?.projectStatusArName}} </button>
-
-        }
+        <button disabled class="pBtn">{{lang == 'ar' ? project?.projectStatusArName : project?.projectStatusEnName}}
+        </button>
     </div>
 </div>
 }

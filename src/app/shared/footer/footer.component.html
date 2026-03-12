@@ -1,7 +1,7 @@
 <footer>
   <div class="container p-2">
     <div class="row gy-4">
-      <div class="col-lg-4 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12">
         <div class="logo">
           <img src="https://res.cloudinary.com/drvtf0l8n/image/upload/v1760585408/logo_lch1hw.png" alt="شعار الشركة" loading="lazy"/>
           <div class="social">
@@ -21,19 +21,14 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12">
         <div class="box">
           <h3>{{"footer.contact" | translate}}</h3>
           <ul>
-            <li (click)="location()" class="d-flex align-items-center">
-              <i class="fas fa-location-dot"></i>
 
-              <span>{{"footer.address" | translate}}</span
-              >
-            </li>
             <li (click)="openWhatsApp()">
               <i class="fab fa-whatsapp"></i>
-              <span>+996539885590</span>
+              <span>996539885580+</span>
             </li>
             <li (click)="openCall()">
               <i class="fas fa-phone"></i>
@@ -47,7 +42,7 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 col-12">
+      <div class="col-lg-3 col-md-6 col-12">
         <div class="box">
           <h3>{{"footer.pages" | translate}}</h3>
           <ul>
@@ -56,6 +51,26 @@
             <li routerLink="/services">{{"services" | translate}}</li>
             <li routerLink="/projects">{{"projects" | translate}}</li>
             <li routerLink="/contact">{{"contact" | translate}}</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <div class="box">
+          <h3>{{"footer.location" | translate}}</h3>
+          <ul>
+            <li class="d-flex align-items-center">
+              <i class="fas fa-location-dot"></i>
+
+              <span>{{"footer.address1" | translate}}</span
+              >
+            </li>
+            <li  class="d-flex align-items-center">
+              <i class="fas fa-location-dot"></i>
+
+              <span>{{"footer.address2" | translate}}</span
+              >
+            </li>
+
           </ul>
         </div>
       </div>

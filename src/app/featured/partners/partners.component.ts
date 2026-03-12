@@ -42,8 +42,8 @@ swiper4?: Swiper;
       spaceBetween: 20,
       breakpoints: {
         1200: { slidesPerView: 8 },
-        768: { slidesPerView: 4 },
-        578: { slidesPerView: 3 },
+        768: { slidesPerView: 5 },
+        578: { slidesPerView: 4 },
         300: { slidesPerView: 3 },
       },
       loop: true,

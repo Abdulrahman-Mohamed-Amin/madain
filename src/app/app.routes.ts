@@ -17,7 +17,6 @@ export const routes: Routes = [
   { path: 'projects', component: ProjectsComponent },      
   { path: 'projects/:city', component: ProjectsComponent } ,
   { path: "contact", component: ContactComponent },
-  { path: "project/:id", component: ProjectDetilsComponent },
-
+  { path: ":slug", component: ProjectDetilsComponent },
   { path: "**", component: HomeComponent }
 ];

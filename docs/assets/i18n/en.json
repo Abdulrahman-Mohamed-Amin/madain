@@ -29,6 +29,8 @@
     "makkah-des": "Discover our latest projects in Mekkah",
     "jeddah": "Jeddah Projects",
     "jeddah-des": "Distinctive residential projects in the heart of Jeddah",
+    "madena": "Al Madinah Projects",
+    "madena-des": "Distinctive residential projects in the heart of Al Madinah",
     "btn": "View Projects",
     "title": "Projects",
     "view": "View Project ",
@@ -38,22 +40,22 @@
     "status_soon": "soon"
   },
   "card": {
-    "owner":"Ownership Apartments",
-    "more":"More details",
-    "build":"Buildings",
-    "unit":"Units"
+    "owner": "Ownership Apartments",
+    "more": "More details",
+    "build": "Buildings",
+    "unit": "Units"
   },
   "stats": {
-    "title":"Numbers Reflect Confidence",
-    "projects":"projects",
-    "project":"project",
+    "title": "Numbers Reflect Confidence",
+    "projects": "projects",
+    "project": "project",
     "builds": "buildings",
     "build": "building",
     "units": "Units",
     "unit": "Units",
     "land": "Land Area",
     "surface": "Surface Area",
-    "metar":"m"
+    "metar": "m"
   },
   "serv": {
     "title": "Services",
@@ -78,14 +80,14 @@
     }
   },
   "news": {
-    "title":"Our News",
+    "title": "Our News",
     "sec1": {
       "title": "Madain Signs a Memorandum of Understanding with Saudi Bayut",
       "des1": "In a move that reflects our commitment to developing the digital real estate sector, Madain Real Estate Company has signed a strategic memorandum of understanding with Bayut, the leading real estate marketing platform in Saudi Arabia.",
       "des2": "This partnership aims to enhance customer experience and expand our presence in the local market through innovative marketing solutions."
     },
     "sec2": {
-      "title": "Exclusive meeting with the General Manager",
+      "title": "Exclusive meeting with the Chairman of the Board",
       "des": "In an exclusive interview with Bayut, General Manager outlined the company's next phase, emphasizing our commitment to innovation and digital transformation in the real estate sector. The discussion touched on our most notable achievements, expansion plans both inside and outside the Kingdom, and strategies to enhance the customer and investor experience through advanced technological solutions."
     },
     "sec3": {
@@ -97,45 +99,46 @@
     "madain": "Madain, your dream of luxury housing starts with us",
     "contact": "Contact",
     "pages": "Pages",
-    "address": "Jeddah - Al-Salama District - Al-Yamamah Street - Al-Yamamah Business Center - Office 201"
+    "address1": "Jeddah - Al-Salama District - Al-Yamamah Street - Al-Yamamah Business Center - Office 201",
+    "address2": "Makkah Al-Mukarramah - Bathaa Quraish - Thawban Al-Nabawi Street - Office 408",
+    "location": "Company branches"
   },
   "about_sec": {
     "title": "About Us",
     "title2": "Our values",
     "name": "Mr. Taher Al-Muslih",
-    "jop": "General Manager",
-    "speech": "General Manager's Speech",
+    "jop": "Chairman of the Board",
+    "speech": "Chairman of the Board's Speech",
     "des": "Saudi Arabia focuses on developing high-quality residential and commercial projects in line with the goals of Saudi Vision 2030, contributing to increasing ownership and monitoring comprehensive urban development. The company relies on development plans, starting with feasibility studies and identifying strategic locations, and moving into practical design, licensing, and implementation, staffing, and delivery, with full commitment to regulatory compliance, building availability, and post-sales recognition.",
     "word1": "In the name of Allah, the Most Gracious, the Most Merciful, and peace and blessings be upon the most honorable of messengers, our master Muhammad, and upon all his family and companions. A journey of a thousand miles begins with a single step. Since the beginning of our work and with 20 years of experience, we have been moving forward to build the future with steps of hope, determination, and perseverance to achieve success and tangible accomplishments. We are proud to offer our real estate solutions that meet the needs of our brothers and sisters and support the vision of our beloved country, the Kingdom of Saudi Arabia's Vision 2030. Our ambition is for Madain Real Estate Development Company to be a fundamental pillar in the plan for prosperity and progress witnessed by the Kingdom.",
-    "word2": "We believe that real estate is more than just a building; it is an investment in the future. Since our inception, we have been focused on delivering projects that meet our clients' aspirations and contribute to strengthening the national economy. We strive, by the grace of God Almighty, to provide the finest services with a high level of quality, efficiency, and integrity. I thank God Almighty that He has blessed us in the Kingdom of Saudi Arabia with leaders who constantly strive to achieve the quality of life for citizens and residents, as enshrined in Vision 2030." ,
-    "team":{
-      "head1":"Our Team",
-      "head2":"Senior management",
-      "mem1":"Mr . Taher Al-muslih",
-      "title1":"General Manager",
-      "mem2":"Dr . Adel Abokris",
-      "title2":"Operation Manager",
-      "mem3":"Eng . Mostafa Abdulbaky",
-      "title3":"projects Manager"
+    "word2": "We believe that real estate is more than just a building; it is an investment in the future. Since our inception, we have been focused on delivering projects that meet our clients' aspirations and contribute to strengthening the national economy. We strive, by the grace of God Almighty, to provide the finest services with a high level of quality, efficiency, and integrity. I thank God Almighty that He has blessed us in the Kingdom of Saudi Arabia with leaders who constantly strive to achieve the quality of life for citizens and residents, as enshrined in Vision 2030.",
+    "team": {
+      "head1": "Our Team",
+      "head2": "Senior management",
+      "mem1": "Mr . Taher Al-muslih",
+      "title1": "Chairman of the Board",
+      "mem2": "Dr . Adel Abokris",
+      "title2": "Operation Manager",
+      "mem3": "Eng . Mostafa Abdulbaky",
+      "title3": "projects Manager"
     },
-
-    "values":{
-      "title":"values & principles",
-      "box1":{
-        "head":"Quality",
-        "des":"We adhere to the highest quality standards in execution and finishing to ensure we deliver a real estate product that exceeds expectations."
+    "values": {
+      "title": "values & principles",
+      "box1": {
+        "head": "Quality",
+        "des": "We adhere to the highest quality standards in execution and finishing to ensure we deliver a real estate product that exceeds expectations."
       },
-      "box2":{
-        "head":"Innovation",
-        "des":"We believe in the importance of innovation in design and planning to provide modern solutions that meet future aspirations."
+      "box2": {
+        "head": "Innovation",
+        "des": "We believe in the importance of innovation in design and planning to provide modern solutions that meet future aspirations."
       },
-      "box3":{
-        "head":"Integrity",
-        "des":"Transparency and credibility are the foundation of our dealings, and we are committed to clarity at every stage of the project."
+      "box3": {
+        "head": "Integrity",
+        "des": "Transparency and credibility are the foundation of our dealings, and we are committed to clarity at every stage of the project."
       },
-      "box4":{
-        "head":"The Future",
-        "des":"We build projects that keep pace with urban development and contribute to creating a sustainable residential environment for future generations."
+      "box4": {
+        "head": "The Future",
+        "des": "We build projects that keep pace with urban development and contribute to creating a sustainable residential environment for future generations."
       }
     }
   },
@@ -169,23 +172,23 @@
   "projects_sec": {
     "title": "Projects",
     "btn": "More Projects",
-    "location":{
-      "title":"Why this place?",
-      "box1":{
-        "head": "Prime location", 
-        "des":"Close to essential services" 
+    "location": {
+      "title": "Why this place?",
+      "box1": {
+        "head": "Prime location",
+        "des": "Close to essential services"
       },
-      "box2":{
-        "head": "Easy access", 
-        "des":"Nearby exits and roads" 
+      "box2": {
+        "head": "Easy access",
+        "des": "Nearby exits and roads"
       },
-      "box3":{
-        "head": "Residential environment", 
-        "des":"Family-friendly area" 
+      "box3": {
+        "head": "Residential environment",
+        "des": "Family-friendly area"
       },
-      "box4":{
-        "head": "Higher value", 
-        "des":"A location that enhances the project's appeal." 
+      "box4": {
+        "head": "Higher value",
+        "des": "A location that enhances the project's appeal."
       }
     }
   },

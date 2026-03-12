@@ -10,6 +10,7 @@ import { log } from 'console';
 import { ProjectsService } from '../../core/services/projects.service';
 import { Project } from '../../core/interface/project';
 import { CardComponent } from "../../shared/card/card.component";
+import { LanguageService } from '../../core/language.service';
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -21,7 +22,10 @@ export class ProjectsComponent implements OnInit {
   city: string | null = null
 
   projects: Project[] = []
-  constructor(private meta: MetaService, private _route: ActivatedRoute, private _projects: ProjectsService) {
+
+  lang:string = ''
+
+  constructor(private meta: MetaService, private _route: ActivatedRoute, private _projects: ProjectsService , private _lang:LanguageService) {
     this.meta.updateTags({
       title: 'مدائن العقارية | مشاريعنا',
       description:
@@ -32,8 +36,13 @@ export class ProjectsComponent implements OnInit {
     });
   }
 
+
+
   ngOnInit(): void {
     this.getCity()
+    this._lang.currentLang$.subscribe(res => {
+      this.lang = res
+    })
   }
 
   getCity() {
@@ -60,6 +69,10 @@ export class ProjectsComponent implements OnInit {
 
       if (this.city === 'jeddah') {
         this.projects = all.filter(p => (p?.arLocationName ?? '').includes('جدة'));
+        return;
+      }
+      if (this.city === 'madena') {
+        this.projects = all.filter(p => (p?.arLocationName ?? '').includes('المدينة'));
         return;
       }
 

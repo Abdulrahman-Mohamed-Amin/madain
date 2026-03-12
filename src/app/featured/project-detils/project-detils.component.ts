@@ -13,6 +13,7 @@ import { LanguageService } from '../../core/language.service';
 import Swiper from 'swiper';
 import { log } from 'node:console';
 import { TranslateModule } from '@ngx-translate/core';
+import { GetIDService } from '../../core/services/get-id.service';
 
 @Component({
   selector: 'app-project-detils',
@@ -28,12 +29,13 @@ export class ProjectDetilsComponent {
   lang: string = ''
   surfaceArea: string = ''
   groundArea: string = ''
+  id: any
 
   countSoldUnit: any[] = []
 
-  constructor(private meta: MetaService, private _project: ProjectsService, private _route: ActivatedRoute, private _lang: LanguageService, @Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(private meta: MetaService, private _project: ProjectsService, private _route: ActivatedRoute, private _lang: LanguageService, @Inject(PLATFORM_ID) private platformId: Object , private idService:GetIDService) {
     this.meta.updateTags({
-      title: 'مدائن العقارية | حلم 101',
+      title:`مدائن العقارية | حلم 101`,
       description:
         'مدائن العقارية شركة سعودية متخصصة في تطوير وتسويق العقارات السكنية تقدم شقق تمليك حديثة في جدة ومكة بمعايير جودة عالية .',
       url: 'https://madain.sa/helm-101',
@@ -43,7 +45,15 @@ export class ProjectDetilsComponent {
   }
 
   ngOnInit(): void {
-    this.getProject()
+  this.idService.getSelectedProject().subscribe(id => {
+    if (!id) {
+      return;
+    }
+    this.id = id;
+    this.getProject();
+  });
+
+
     this._lang.currentLang$.subscribe(res => {
       this.lang = res
     })
@@ -51,7 +61,7 @@ export class ProjectDetilsComponent {
   }
 
   getProject() {
-    this._project.getProjetById(this._route.snapshot.params['id']).pipe(
+    this._project.getProjetById(this.id).pipe(
       map(project => ({
         ...project,
         buildings: project.buildings.map(building => ({
@@ -72,10 +82,17 @@ export class ProjectDetilsComponent {
       }))
     ).subscribe(res => {
       this.project = res
-      console.log(res);
       this.surfaceArea = Number(res?.surfaceArea).toFixed()
       this.groundArea = Number(res?.groundArea).toFixed()
       this.getSoldUnit()
+
+          this.meta.updateTags({
+      title: `${this.project.arTitle} | مدائن العقارية`,
+      description: this.project.arDescription || `مشروع ${this.project.arTitle} من مدائن العقارية.`,
+      url: `https://madain.sa/projects/${this.project.id}`, // أو أي رابط ديناميك
+        keywords:
+        'عقارات, شركة مدائن العقارية, شقق تمليك جدة, فلل للبيع, مشاريع سكنية, شراء شقق, عقارات جدة',
+    });
     })
   }
 
@@ -83,7 +100,6 @@ export class ProjectDetilsComponent {
     let sold = this.project?.buildings.map(b => {
       let s = b.units.filter(u => u.isSealed).length
       this.countSoldUnit.push({ id: b.id, sold: s })
-      console.log(this.countSoldUnit[0])
     })
   }
   async ngAfterViewInit(): Promise<void> {

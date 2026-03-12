@@ -7,10 +7,15 @@
     <h1>{{"projects_sec.title" |translate}}</h1>
     } @else if (city == 'makkah') {
 
-    <h1>مشاريعنا في مكة</h1>
-    } @else {
+    <h1>{{lang == "ar" ? 'مشاريعنا في مكة ' : "Makkah Projects"}}</h1>
+    } 
+     @else if (city == 'madena') {
 
-    <h1>مشاريعنا في جدة</h1>
+     <h1>{{lang == "ar" ? 'مشاريعنا في المدينة المنورة ' : "Al Madinah Projects"}}</h1>
+    } 
+    @else {
+
+    <h1>{{lang == "ar" ? 'مشاريعنا في جدة ' : "Jeddah Projects"}}</h1>
     }
 </div>
 

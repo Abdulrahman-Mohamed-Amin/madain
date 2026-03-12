@@ -95,7 +95,9 @@
     <!-- =================== الوحدات ==================== -->
 
     <div class="buildings p-60 container">
-        <h2 class="title">{{"projects_info.unit_title" | translate}}</h2>
+        @if(project?.buildings?.length !== 0){
+            <h2 class="title">{{"projects_info.unit_title" | translate}}</h2>
+        }
         @for(b of project?.buildings; track $index){
         <div class="building">
 

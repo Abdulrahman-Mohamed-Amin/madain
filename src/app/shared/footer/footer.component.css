@@ -39,6 +39,9 @@ footer ul {
   gap: 15px;
   padding: 0;
 }
+span{
+  color: #ffffffb2;
+}
 ul li {
   display: flex;
   gap: 10px;

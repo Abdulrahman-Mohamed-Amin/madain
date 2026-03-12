@@ -159,18 +159,32 @@ header i {
 }
 
 
-.lang-btn {
-  padding: 2px 5px;
-  border: 1px solid var(--lighit1);
-  background-color: var(--lighit1);
-  color: #fff;
-  font-weight: bold;
-  border-radius: 4px;
+
+
+
+/* language-toggle.component.css */
+.language-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 5px ;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  background-color: #f1f1f1;
+  font-weight: bold;
 }
 
-.lang-btn:hover {
-  background-color: transparent;
-  color: var(--lighit1);
- 
+.flag {
+  width: 25px;
+  height: 18px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.lang-text {
+  font-size: 15px;
+  text-transform: uppercase;
 }
