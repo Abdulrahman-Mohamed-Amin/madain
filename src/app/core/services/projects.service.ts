@@ -10,7 +10,7 @@ export class ProjectsService {
   url = environment.apiUrl + "Project"
   constructor(private http: HttpClient) { }
 
-  getProjet() {
+  getProjets() {
     return this.http.get<Project[]>(this.url)
   }
   getProjetById(id:number) {

@@ -1,10 +1,8 @@
-import { isPlatformBrowser, Location, PopStateEvent } from '@angular/common';
-import { Component, effect, HostListener, inject, Inject, NgZone, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, NgZone, OnInit, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, RouterModule , Router, Scroll } from '@angular/router';
 import * as AOS from 'aos';
 import { filter } from 'rxjs';
-
-
 
 
 

@@ -53,7 +53,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   getProjects() {
-    this._projects.getProjet().subscribe(res => {
+    this._projects.getProjets().subscribe(res => {
       this.projects = res
       const all = res ?? [];
 

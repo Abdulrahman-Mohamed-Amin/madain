@@ -3,6 +3,7 @@ import { PartnerService } from '../../core/services/partner.service';
 import Swiper from 'swiper';
 import { environment } from '../../../environments/environment';
 import { isPlatformBrowser } from '@angular/common';
+import { LanguageService } from '../../core/language.service';
 
 @Component({
   selector: 'app-partners',
@@ -13,14 +14,17 @@ import { isPlatformBrowser } from '@angular/common';
 })
 export class PartnersComponent implements OnInit{
   url = environment.mediaUrl
-
+lang:string = ''
   swiper3?: Swiper;
 swiper4?: Swiper;
   partner:any[] = []
-  constructor(private _partenr:PartnerService , @Inject(PLATFORM_ID) private platformId: Object){
+  constructor(private _partenr:PartnerService , @Inject(PLATFORM_ID) private platformId: Object , private _lang:LanguageService){
   }
 
   ngOnInit(): void {
+    this._lang.currentLang$.subscribe(res => {
+      this.lang =res
+    })
       if (isPlatformBrowser(this.platformId)) {
     
         this._partenr.get().subscribe(res =>{

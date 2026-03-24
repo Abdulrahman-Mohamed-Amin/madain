@@ -34,14 +34,7 @@ export class ProjectDetilsComponent {
   countSoldUnit: any[] = []
 
   constructor(private meta: MetaService, private _project: ProjectsService, private _route: ActivatedRoute, private _lang: LanguageService, @Inject(PLATFORM_ID) private platformId: Object , private idService:GetIDService) {
-    this.meta.updateTags({
-      title:`مدائن العقارية | حلم 101`,
-      description:
-        'مدائن العقارية شركة سعودية متخصصة في تطوير وتسويق العقارات السكنية تقدم شقق تمليك حديثة في جدة ومكة بمعايير جودة عالية .',
-      url: 'https://madain.sa/helm-101',
-      keywords:
-        'عقارات, شركة مدائن العقارية, شقق تمليك جدة, فلل للبيع, مشاريع سكنية, شراء شقق, عقارات جدة',
-    });
+
   }
 
   ngOnInit(): void {

@@ -33,7 +33,7 @@ ngAfterViewInit(): void {
   this.getNumbers();
 }
   getNumbers() {
-    this.projects.getProjet().subscribe(res => {
+    this.projects.getProjets().subscribe(res => {
       this.projectNum = res.length
 
       const totalBuildings = res.reduce((acc: number, cur) => {

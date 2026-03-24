@@ -29,7 +29,7 @@ export class ProjComponent implements OnInit{
   }
 
   getprojects(){
-    this._project.getProjet().subscribe(res =>{
+    this._project.getProjets().subscribe(res =>{
       this.projects = res.filter(p => p.projectStatusArName !== "قريبا")
     })
   }
