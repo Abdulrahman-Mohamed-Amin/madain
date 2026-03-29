@@ -243,6 +243,8 @@
   object-fit: cover;
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.16);
   transform: translateY(2px);
+  object-fit: cover;
+  object-position: center top;
 }
 .team-card__name {
   margin: 12px 0 6px;

@@ -14,7 +14,7 @@
                             <div class="news-card__image">
 
                                 @if(n.imagePaths.length > 0){
-                                <img [src]="url + n.imagePaths[0]" alt="Project Delivery">
+                                <img [src]="url + n.imagePaths[0]" alt="Project Delivery" loading="lazy">
                                 }@else {
                                 <video [src]="url + n.videoPath " controls></video>
                                 }

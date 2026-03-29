@@ -38,13 +38,21 @@ export class ProjectDetilsComponent {
   }
 
   ngOnInit(): void {
-  this.idService.getSelectedProject().subscribe(id => {
-    if (!id) {
-      return;
-    }
-    this.id = id;
-    this.getProject();
-  });
+  // this.idService.getSelectedProject().subscribe(id => {
+  //   if (!id) {
+  //     return;
+  //   }
+  //   this.id = id;
+  //   this.getProject();
+  // });
+
+ this._route.paramMap.subscribe(params => {
+  const id = params.get('id');
+
+  this.id = id
+ 
+  this.getProject()
+});
 
 
     this._lang.currentLang$.subscribe(res => {
@@ -101,13 +109,13 @@ export class ProjectDetilsComponent {
       spaceBetween: 20,
       breakpoints: {
         1200: {
-          slidesPerView: 4
-        },
-        768: {
           slidesPerView: 3
         },
-        578: {
+        768: {
           slidesPerView: 2
+        },
+        578: {
+          slidesPerView: 1
         }
       },
       loop: true,

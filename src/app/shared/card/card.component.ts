@@ -20,10 +20,10 @@ export class CardComponent implements OnInit {
   lang: string = ''
 
   constructor(
-    private _lang: LanguageService, 
-    private idService: GetIDService, 
+    private _lang: LanguageService,
+    private idService: GetIDService,
     private router: Router   // صححت الاستيراد
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this._lang.currentLang$.subscribe(res => {
@@ -36,13 +36,15 @@ export class CardComponent implements OnInit {
     return name
       .toLowerCase()
       .trim()
-      .replace(/\s+/g, '-')      
-      .replace(/[^a-z0-9-]/g, '') 
-      .replace(/-+/g, '-');       
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '')
+      .replace(/-+/g, '-');
   }
 
   openProject(project: Project) {
     this.idService.setSelectedProject(project.id);
-    this.router.navigate(['/', this.toSlug(project.enTitle)]); // استخدم this.toSlug
+    this.router.navigate(['/', this.toSlug(project.enTitle), project.id]); // استخدم this.toSlug
+
+
   }
 }

@@ -15,6 +15,19 @@ import { MetaService } from '../../core/meta.service';
 })
 export class ContactComponent implements OnInit {
 
+  contactForm!: FormGroup;
+
+  meeting = new FormGroup({
+    name: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    purpose: new FormControl('', Validators.required),
+    client: new FormControl('', Validators.required),
+    meet: new FormControl('', Validators.required),
+    date: new FormControl('', Validators.required)
+  })
+
+  isMeetingOpen = false;
   constructor(private meta: MetaService) {
     this.meta.updateTags({
       title: 'مدائن العقارية | تواصل معنا',
@@ -25,17 +38,6 @@ export class ContactComponent implements OnInit {
         'عقارات, شركة مدائن العقارية, شقق تمليك جدة, فلل للبيع, مشاريع سكنية, شراء شقق, عقارات جدة',
     });
   }
-  contactForm!: FormGroup;
-
-  isMeetingOpen = false;
-
-openMeetingModal() {
-  this.isMeetingOpen = true;
-}
-
-closeMeetingModal() {
-  this.isMeetingOpen = false;
-}
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -45,6 +47,15 @@ closeMeetingModal() {
       message: new FormControl('', Validators.required)
     });
   }
+
+  openMeetingModal() {
+    this.isMeetingOpen = true;
+  }
+
+  closeMeetingModal() {
+    this.isMeetingOpen = false;
+  }
+
 
   toastMessage: string | null = null;
 
@@ -66,8 +77,29 @@ closeMeetingModal() {
         'XaVuXfuWTEMN_kLI8'
       ).then(() => {
         this.showToast('تم ارسال رسالتك بنجاح ')
-        this.contactForm.reset();
+        // this.contactForm.reset();
       }).catch(() => {
+      });
+    } else {
+
+    }
+  }
+
+  sendMeeting() {
+    console.log(this.meeting.value)
+    if (this.meeting.valid) {
+      const formData = this.meeting.value;
+      emailjs.send(
+        'service_i31g11c',
+        'template_ztnjwmo',
+        formData,
+        'XaVuXfuWTEMN_kLI8'
+      ).then((res) => {
+        this.showToast('تم ارسال رسالتك بنجاح ')
+        this.meeting.reset();
+        
+      }).catch((ERR) => {
+        
       });
     } else {
 

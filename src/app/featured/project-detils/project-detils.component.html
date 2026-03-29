@@ -16,7 +16,7 @@
                 </div>
 
                 <div class="img_cont">
-                    <img [src]="url + project?.interfaceImagePath" alt="">
+                    <img [src]="url + project?.interfaceImagePath" alt="interface img" loading="lazy">
                 </div>
 
                 <div class="project-stats">
@@ -82,7 +82,7 @@
         <div class="swiper-wrapper">
             @for(img of project?.projectImages; track $index){
             <div class="swiper-slide">
-                <img [src]="url + img" alt="project-img" class="w-100">
+                <img [src]="url + img" alt="project-img" class="w-100" loading="lazy">
             </div>
             }
         </div>
@@ -141,7 +141,7 @@
 
                         <div class="divider"></div>
 
-                        <div class="details row gy-2">
+                        <div class="details row gy-1">
 
                             <div class="col-12">
                                 <div class="item d-flex type" [ngClass]="{'roof': u.arDescription == 'ملحق'}">
@@ -212,7 +212,7 @@
                             <div class="badge-dot"></div>
                             <h3 class="info-title mb-0">{{"projects_sec.location.title" | translate}}</h3>
                         </div>
-
+                        
                         <p class="info-text mt-3">
                             {{lang == 'ar' ? project?.arLocationDescription : project?.enLocationDescription}}
                         </p>
@@ -254,6 +254,7 @@
 
                     </div>
                 </div>
+                
                 <!-- Map -->
                 <!-- <div class="col-lg-6">
                     <div class="map-card h-100">
