@@ -5,7 +5,6 @@ import { RouterModule, Router } from '@angular/router'; // صحح هنا
 import { LanguageService } from '../../core/language.service';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule, NgClass } from "@angular/common";
-import { GetIDService } from '../../core/services/get-id.service';
 
 @Component({
   selector: 'app-card',
@@ -21,7 +20,6 @@ export class CardComponent implements OnInit {
 
   constructor(
     private _lang: LanguageService,
-    private idService: GetIDService,
     private router: Router   // صححت الاستيراد
   ) { }
 
@@ -42,7 +40,7 @@ export class CardComponent implements OnInit {
   }
 
   openProject(project: Project) {
-    this.idService.setSelectedProject(project.id);
+  
     this.router.navigate(['/', this.toSlug(project.enTitle), project.id]); // استخدم this.toSlug
 
 

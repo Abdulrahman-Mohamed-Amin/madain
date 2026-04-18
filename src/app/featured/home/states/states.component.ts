@@ -1,6 +1,5 @@
 import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { ProjectsService } from '../../../core/services/projects.service';
-import { log } from 'console';
 import { TranslateModule } from '@ngx-translate/core';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -12,76 +11,96 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './states.component.css'
 })
 export class StatesComponent {
+
   @ViewChild('statsSection') statsSection!: ElementRef;
-  projectNum: number = 0
-  buildingNum: number = 0
-  units: number = 0
-  surface: number = 0
-  ground: number = 0
+
+  projectNum: number = 0;
+  buildingNum: number = 0;
+  units: number = 0;
+  surface: number = 0;
+  ground: number = 0;
 
   private hasAnimated = false;
+  private dataReady = false;
+  private viewReady = false;
 
-constructor(
-  private projects: ProjectsService,
-  @Inject(PLATFORM_ID) private platformId: Object
-) {}
+  constructor(
+    private projects: ProjectsService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-ngAfterViewInit(): void {
-  if (isPlatformBrowser(this.platformId)) {
-    this.observeSection();
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.observeSection();
+    }
+
+    this.getNumbers();
   }
-  this.getNumbers();
-}
+
+  // =========================
+  // جلب البيانات
+  // =========================
   getNumbers() {
     this.projects.getProjets().subscribe(res => {
-      this.projectNum = res.length
 
-      const totalBuildings = res.reduce((acc: number, cur) => {
-        return acc + (Number(cur.buildingCount) || 0);
-      }, 0);
+      this.projectNum = res.length;
 
-      const unitsCount = res.reduce((acc: number, cur) => {
-        return acc + (Number(cur.unitsCount) || 0);
-      }, 0)
-      const sutfaceArea = res.reduce((acc: number, cur) => {
-        return acc + (Number(cur.surfaceArea) || 0);
-      }, 0)
-      const groundArea = res.reduce((acc: number, cur) => {
-        return acc + (Number(cur.groundArea) || 0);
-      }, 0)
+      this.buildingNum = res.reduce((acc: number, cur) =>
+        acc + (Number(cur.buildingCount) || 0), 0
+      );
 
-      this.buildingNum = totalBuildings
-      this.units = unitsCount
-      this.surface = +sutfaceArea.toFixed()
-      this.ground = +groundArea.toFixed()
-    })
+      this.units = res.reduce((acc: number, cur) =>
+        acc + (Number(cur.unitsCount) || 0), 0
+      );
+
+      this.surface = +res.reduce((acc: number, cur) =>
+        acc + (Number(cur.surfaceArea) || 0), 0
+      ).toFixed();
+
+      this.ground = +res.reduce((acc: number, cur) =>
+        acc + (Number(cur.groundArea) || 0), 0
+      ).toFixed();
+
+      this.dataReady = true;
+      this.tryStartCounters();
+    });
   }
-
 
   // =========================
   // مراقبة ظهور السيكشن
   // =========================
   private observeSection() {
-
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
 
-        if (entry.isIntersecting && !this.hasAnimated) {
-          this.hasAnimated = true;
-          this.startCounters();
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.viewReady = true;
+          this.tryStartCounters();
           observer.disconnect();
         }
-
       });
+
     }, {
       threshold: 0.3
     });
 
-    observer.observe(this.statsSection.nativeElement);
+    if (this.statsSection?.nativeElement) {
+      observer.observe(this.statsSection.nativeElement);
+    }
   }
 
   // =========================
-  // تشغيل العدادات
+  // تشغيل العدادات فقط عند الجاهزية
+  // =========================
+  private tryStartCounters() {
+    if (this.dataReady && this.viewReady && !this.hasAnimated) {
+      this.hasAnimated = true;
+      this.startCounters();
+    }
+  }
+
+  // =========================
+  // تشغيل الأنيميشن
   // =========================
   private startCounters() {
 
@@ -93,32 +112,35 @@ ngAfterViewInit(): void {
 
       setTimeout(() => {
         this.animateCount(counter, target);
-      }, index * 120); // stagger effect
+      }, index * 120);
 
     });
   }
 
   // =========================
-  // دالة العدّاد (تصاعد الأرقام)
+  // عدّاد تدريجي
   // =========================
   private animateCount(element: HTMLElement, target: number) {
-    const duration = 1200;
-    const startTime = performance.now();
 
-    const formatter = new Intl.NumberFormat('en-US'); // ✅ أرقام إنجليزية
+    const duration = 2000;
+    const startTime = performance.now();
+    const formatter = new Intl.NumberFormat('en-US');
 
     const update = (currentTime: number) => {
+
       const progress = Math.min((currentTime - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
       const value = Math.floor(eased * target);
 
       element.textContent = formatter.format(value);
 
-      if (progress < 1) requestAnimationFrame(update);
-      else element.textContent = formatter.format(target);
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        element.textContent = formatter.format(target);
+      }
     };
 
     requestAnimationFrame(update);
   }
-
 }

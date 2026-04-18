@@ -13,7 +13,7 @@ import { LanguageService } from '../../core/language.service';
 import Swiper from 'swiper';
 import { log } from 'node:console';
 import { TranslateModule } from '@ngx-translate/core';
-import { GetIDService } from '../../core/services/get-id.service';
+
 
 @Component({
   selector: 'app-project-detils',
@@ -33,7 +33,7 @@ export class ProjectDetilsComponent {
 
   countSoldUnit: any[] = []
 
-  constructor(private meta: MetaService, private _project: ProjectsService, private _route: ActivatedRoute, private _lang: LanguageService, @Inject(PLATFORM_ID) private platformId: Object , private idService:GetIDService) {
+  constructor(private meta: MetaService, private _project: ProjectsService, private _route: ActivatedRoute, private _lang: LanguageService, @Inject(PLATFORM_ID) private platformId: Object ) {
 
   }
 

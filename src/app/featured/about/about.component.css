@@ -210,6 +210,17 @@
   transform: rotate(-8deg);
   box-shadow: 0 18px 30px rgba(206, 140, 91, 0.18) inset;
 }
+
+.blob {
+  position: absolute;
+  width: 230px;
+  height: 195px;
+  background: linear-gradient(145deg, rgba(246, 178, 129, .45), rgba(206, 140, 91, .18));
+  filter: saturate(0.95);
+  border-radius: 62% 38% 55% 45% / 52% 55% 45% 48%;
+  transform: rotate(-8deg);
+  box-shadow: 0 18px 30px rgba(206, 140, 91, 0.18) inset;
+}
 .blob--a {
   transform: rotate(-10deg) translateX(-4px);
 }
@@ -247,7 +258,7 @@
   object-position: center top;
 }
 .team-card__name {
-  margin: 12px 0 6px;
+  margin: 5px 0 6px;
   font-size: 20px;
   color: var(--blue2);
 }
