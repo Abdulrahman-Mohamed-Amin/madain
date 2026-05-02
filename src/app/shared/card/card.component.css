@@ -204,7 +204,14 @@ button {
 
 
 
-
+.sold-budeg{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  z-index: 10;
+  opacity: 0.5;
+}
 
 /* common */
 .ribbon {

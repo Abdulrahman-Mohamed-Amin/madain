@@ -1,9 +1,11 @@
 @if(project?.projectStatusArName !== "قريبا"){
 <div class="pCard position-relative" data-aos="fade-up" data-aos-delay="400">
     @if (project?.isSealed) {
-    <div class="ribbon" [ngClass]="{'ribbon-top-left': lang == 'ar' , 'ribbon-top-right': lang == 'en'} ">
+    <!-- <div class="ribbon" [ngClass]="{'ribbon-top-left': lang == 'ar' , 'ribbon-top-right': lang == 'en'} ">
         <span>{{lang == "ar" ? "مباع بالكامل" : "Sold Out"}}</span>
-    </div>
+    </div> -->
+  <img src="../../../assets/تم البيع.svg" alt="" width="150" class="sold-budeg">
+
     }
     <div class="pCard__media">
         <img [src]="url + project?.interfaceImagePath" alt="مشروع"  loading="lazy"/>

@@ -1,22 +1,42 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { HeaderComponent } from "../../shared/header/header.component";
 import { FooterComponent } from "../../shared/footer/footer.component";
-import { FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormBuilder } from '@angular/forms';
 import emailjs from 'emailjs-com';
 import { TranslateModule } from '@ngx-translate/core';
 import { MetaService } from '../../core/meta.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [HeaderComponent, FooterComponent, ReactiveFormsModule, TranslateModule],
+  imports: [HeaderComponent, FooterComponent, ReactiveFormsModule, TranslateModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
 export class ContactComponent implements OnInit {
 
-  contactForm!: FormGroup;
+  submited: boolean = false
 
+  fb = inject(FormBuilder)
+  contactForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')]],
+    subject: ['', Validators.required],
+    message: ['', Validators.required],
+  })
+  get name() {
+    return this.contactForm.get('name');
+  }
+  get email() {
+    return this.contactForm.get('email');
+  }
+  get subject() {
+    return this.contactForm.get('subject');
+  }
+  get message() {
+    return this.contactForm.get('message');
+  }
   meeting = new FormGroup({
     name: new FormControl('', Validators.required),
     phone: new FormControl('', Validators.required),
@@ -39,13 +59,8 @@ export class ContactComponent implements OnInit {
     });
   }
 
+
   ngOnInit() {
-    this.contactForm = new FormGroup({
-      name: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      subject: new FormControl('', [Validators.required]),
-      message: new FormControl('', Validators.required)
-    });
   }
 
   openMeetingModal() {
@@ -67,22 +82,24 @@ export class ContactComponent implements OnInit {
   }
 
   sendEmail() {
-    if (this.contactForm.valid) {
-      const formData = this.contactForm.value;
-
-      emailjs.send(
-        'service_i31g11c',
-        'template_bdjhwfn',
-        formData,
-        'XaVuXfuWTEMN_kLI8'
-      ).then(() => {
-        this.showToast('تم ارسال رسالتك بنجاح ')
-        // this.contactForm.reset();
-      }).catch(() => {
-      });
-    } else {
-
+    if (this.contactForm.invalid) {
+      this.submited = true
+      console.log("invalid");
+      return
     }
+    const formData = this.contactForm.value;
+
+    emailjs.send(
+      'service_i31g11c',
+      'template_bdjhwfn',
+      formData,
+      'XaVuXfuWTEMN_kLI8'
+    ).then(() => {
+      this.showToast('تم ارسال رسالتك بنجاح ')
+      this.submited = false
+      this.contactForm.reset();
+    }).catch(() => {
+    });
   }
 
   sendMeeting() {
@@ -97,9 +114,9 @@ export class ContactComponent implements OnInit {
       ).then((res) => {
         this.showToast('تم ارسال رسالتك بنجاح ')
         this.meeting.reset();
-        
+
       }).catch((ERR) => {
-        
+
       });
     } else {
 
